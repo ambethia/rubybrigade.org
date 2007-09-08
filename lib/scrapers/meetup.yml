@@ -1,0 +1,687 @@
+--- 
+- city: San Francisco
+  name: The San Francisco Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/6/calendar/ical/
+  subdomain: san_francisco
+  country: us
+  website_url: http://ruby.meetup.com/6/
+  lng: -122.41
+  established_on: 2003-10-28
+  description: The San Francisco Ruby Meetup Group is about learning and meeting with fellow "Ruby" and "Ruby on Rails" programmers.
+  state_region: CA
+  lat: 37.79
+  membership_size: 779
+- city: Redwood City
+  name: Silicon Valley Ruby on Rails
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/72/calendar/ical/
+  subdomain: redwood_city
+  country: us
+  website_url: http://ruby.meetup.com/72/
+  lng: -122.25
+  established_on: 2006-05-11
+  description: Meet other local Ruby on Rails engineers
+  state_region: CA
+  lat: 37.53
+  membership_size: 603
+- city: Berkeley
+  name: The East Bay Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/81/calendar/ical/
+  subdomain: berkeley
+  country: us
+  website_url: http://ruby.meetup.com/81/
+  lng: -122.26
+  established_on: 2006-08-23
+  description: The East Bay Ruby Meetup Group is for anyone interested in learing or sharing experiences with "Ruby" or "Ruby on Rails".
+  state_region: CA
+  lat: 37.87
+  membership_size: 295
+- city: Los Angeles
+  name: LA Web Application Developers Meetup
+  feeds: 
+    ics: 
+      uri: http://web.meetup.com/34/calendar/ical/
+  subdomain: los_angeles
+  country: us
+  website_url: http://web.meetup.com/34/
+  lng: -118.29
+  established_on: 2007-02-18
+  description: "Meet with other Web Application Developers. Ruby on Rails, Symfony-project, jQuery, etc. "
+  state_region: CA
+  lat: 34.12
+  membership_size: 248
+- city: New York
+  name: NYC.rb - Ruby & Ruby on Rails Meetup
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/75/calendar/ical/
+  subdomain: new_york
+  country: us
+  website_url: http://ruby.meetup.com/75/
+  lng: -74.0
+  established_on: 2006-07-19
+  description: Discuss all Ruby and Ruby on Rails related topics, meet other developers and other interesting folks. Presentations, workshops, hack-fests and more. Meet other developers, find out about interesting projects and opportunities for work and potential employment.
+  state_region: NY
+  lat: 40.72
+  membership_size: 238
+- city: Raleigh
+  name: The Raleigh-area Ruby Brigade (raleigh.rb)
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/3/calendar/ical/
+  subdomain: raleigh
+  country: us
+  website_url: http://ruby.meetup.com/3/
+  lng: -78.63
+  established_on: 2004-03-18
+  description: "Like the Ruby programming language? We do too! Want to learn more about it? You're in good company. Come join us in our pursuit of humane programming. (We also have a mailing list: http://rubyforge.... )"
+  state_region: NC
+  lat: 35.94
+  membership_size: 223
+- city: Delhi
+  name: "New Delhi Open Source Meetup : LAMP, Ruby, Lazslo, AJAX"
+  feeds: 
+    ics: 
+      uri: http://php.meetup.com/330/calendar/ical/
+  subdomain: delhi
+  country: in
+  website_url: http://php.meetup.com/330/
+  lng: 77.21
+  established_on: 2006-05-03
+  description: Intention of this group is to provide platform to PHP community in Delhi to discuss/learn on new PHP initiatives.  We will be taking on latest from open source world like AJAX, Laszlo, Zend Framework, Lucene Search Engine & PHP 5.  Join us now!
+  state_region: 
+  lat: 28.67
+  membership_size: 216
+- city: Atlanta
+  name: The Atlanta Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/83/calendar/ical/
+  subdomain: atlanta
+  country: us
+  website_url: http://ruby.meetup.com/83/
+  lng: -84.36
+  established_on: 2006-09-12
+  description: ATLRUG is a non-profit organization of individuals interested in developing, promoting, fostering, strengthening, and improving the Ruby programming language and Ruby community.
+  state_region: GA
+  lat: 33.85
+  membership_size: 189
+- city: Palo Alto
+  name: Palo Alto/Stanford Ruby BYOL Hack Session
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/82/calendar/ical/
+  subdomain: palo_alto
+  country: us
+  website_url: http://ruby.meetup.com/82/
+  lng: -122.15
+  established_on: 2006-09-12
+  description: Hack on your projects in a group environment with other Ruby enthousiasts.  Bring Your Own Laptop.
+  state_region: CA
+  lat: 37.44
+  membership_size: 168
+- city: Vancouver
+  name: VanRuby - Vancouver Ruby Association
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/18/calendar/ical/
+  subdomain: vancouver
+  country: ca
+  website_url: http://ruby.meetup.com/18/
+  lng: -123.13
+  established_on: 2004-06-18
+  description: 
+  state_region: BC
+  lat: 49.29
+  membership_size: 129
+- city: San Jose
+  name: South Bay Ruby on Rails
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/99/calendar/ical/
+  subdomain: san_jose
+  country: us
+  website_url: http://ruby.meetup.com/99/
+  lng: -121.9
+  established_on: 2007-02-26
+  description: Bring together people who are passionate about Ruby and Rails in an environment that fosters learning from and helping each other while building lasting friendships
+  state_region: CA
+  lat: 37.29
+  membership_size: 128
+- city: Santa Monica
+  name: The Los Angeles Ruby/Rails Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/84/calendar/ical/
+  subdomain: santa_monica
+  country: us
+  website_url: http://ruby.meetup.com/84/
+  lng: -118.5
+  established_on: 2006-09-30
+  description: Meet other local Ruby on Rails programmers and beginners.
+  state_region: CA
+  lat: 34.02
+  membership_size: 113
+- city: Natick
+  name: The Metrowest Ruby Users Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/87/calendar/ical/
+  subdomain: natick
+  country: us
+  website_url: http://ruby.meetup.com/87/
+  lng: -71.35
+  established_on: 2006-12-26
+  description: Are you a Ruby programmer? Rubyist? Railsian? Do you aspire to be one? Just experimenting? Do you dream about painless object introspection and hack Eigenclasses while you brush your teeth? Do you spend time each day in the RDocs? Have you discovered Ruby "poignantly?"
+  state_region: MA
+  lat: 42.29
+  membership_size: 93
+- city: Brisbane
+  name: The Brisbane Ruby Brigade
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/74/calendar/ical/
+  subdomain: brisbane
+  country: au
+  website_url: http://ruby.meetup.com/74/
+  lng: 153.02
+  established_on: 2006-07-10
+  description: Programming in the Ruby language.
+  state_region: 
+  lat: -27.46
+  membership_size: 88
+- city: Miami
+  name: South Florida Ruby Brigade
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/71/calendar/ical/
+  subdomain: miami
+  country: us
+  website_url: http://ruby.meetup.com/71/
+  lng: -80.3
+  established_on: 2006-05-07
+  description: Meet other local Ruby programmers.
+  state_region: FL
+  lat: 25.67
+  membership_size: 82
+- city: Forest Park
+  name: Chicago Area Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/77/calendar/ical/
+  subdomain: forest_park
+  country: us
+  website_url: http://ruby.meetup.com/77/
+  lng: -87.82
+  established_on: 2006-07-21
+  description: Welcome to ChicagoRuby.org! When smart people challenge each other to grow, great things happen. That's what I like about this group of Ruby and Ruby on Rails enthusiasts. I'm excited about our future! Learn more about us right here and at http://chicagorub... .
+  state_region: IL
+  lat: 41.87
+  membership_size: 81
+- city: Baltimore
+  name: B'more on Rails
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/85/calendar/ical/
+  subdomain: baltimore
+  country: us
+  website_url: http://ruby.meetup.com/85/
+  lng: -76.61
+  established_on: 2006-10-18
+  description: B'more on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails application framework.
+  state_region: MD
+  lat: 39.3
+  membership_size: 74
+- city: Tampa
+  name: The Tampa Ruby Brigade
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/73/calendar/ical/
+  subdomain: tampa
+  country: us
+  website_url: http://ruby.meetup.com/73/
+  lng: -82.51
+  established_on: 2006-07-02
+  description: Curious about Ruby on Rails? Into web development and want to improve your technique, do things faster and cleaner? Want to learn more and meet others thinking along the same lines in the Tampa Bay area? If so, this is the place.
+  state_region: FL
+  lat: 27.92
+  membership_size: 61
+- city: Vancouver
+  name: The Vancouver Ruby/Rails Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/112/calendar/ical/
+  subdomain: vancouver
+  country: ca
+  website_url: http://ruby.meetup.com/112/
+  lng: -123.12
+  established_on: 2007-07-17
+  description: Meet other local Ruby/Rails programmers.
+  state_region: BC
+  lat: 49.28
+  membership_size: 59
+- city: Bangalore
+  name: The Bangalore LAMP Meetup Group
+  feeds: 
+    ics: 
+      uri: http://lampsoftware.meetup.com/5/calendar/ical/
+  subdomain: bangalore
+  country: in
+  website_url: http://lampsoftware.meetup.com/5/
+  lng: 77.56
+  established_on: 2006-12-19
+  description: Meet other local users of the LAMP (Linux, Apache, MySQL, PHP) platform, a very popular combination for developing OpenSource web applications and the most widely used web development platform.
+  state_region: 
+  lat: 12.97
+  membership_size: 52
+- city: Santa Cruz
+  name: Santa Cruz Ruby on Rails Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/86/calendar/ical/
+  subdomain: santa_cruz
+  country: us
+  website_url: http://ruby.meetup.com/86/
+  lng: -122.06
+  established_on: 2006-11-06
+  description: Meet, learn and share with local Ruby on Rails developers.
+  state_region: CA
+  lat: 36.99
+  membership_size: 50
+- city: Indianapolis
+  name: The Indianapolis Ruby & Rails Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/89/calendar/ical/
+  subdomain: indianapolis
+  country: us
+  website_url: http://ruby.meetup.com/89/
+  lng: -86.11
+  established_on: 2007-01-09
+  description: Meet other local Ruby programmers.  Any Indy resident interested in Ruby or the Rails framework is invited!
+  state_region: IN
+  lat: 39.77
+  membership_size: 50
+- city: Charlotte
+  name: Charlotte Ruby Enthusiasts
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/70/calendar/ical/
+  subdomain: charlotte
+  country: us
+  website_url: http://ruby.meetup.com/70/
+  lng: -80.76
+  established_on: 2006-02-16
+  description: Meet, share, and learn with other local Ruby/Rails programmers.
+  state_region: NC
+  lat: 35.12
+  membership_size: 49
+- city: Auckland
+  name: "Ruby Nights: The Auckland Ruby Group"
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/96/calendar/ical/
+  subdomain: auckland
+  country: nz
+  website_url: http://ruby.meetup.com/96/
+  lng: 174.76
+  established_on: 2007-02-19
+  description: "This is a monthly group that explores the use of Ruby and Ruby On Rails. "
+  state_region: 
+  lat: -36.85
+  membership_size: 43
+- city: San Jose
+  name: The SJ Entrepreneur on Rails Meetup
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/100/calendar/ical/
+  subdomain: san_jose
+  country: us
+  website_url: http://ruby.meetup.com/100/
+  lng: -121.95
+  established_on: 2007-03-22
+  description: With Ruby on Rails, web applications are easier than ever to create.  Small teams are finding strong demand for Rails development services and the slick apps Rails makes possible.
+  state_region: CA
+  lat: 37.41
+  membership_size: 41
+- city: Ni Dilli
+  name: The Ni Dilli Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/108/calendar/ical/
+  subdomain: ni_dilli
+  country: in
+  website_url: http://ruby.meetup.com/108/
+  lng: 77.22
+  established_on: 2007-06-15
+  description: Meet other local Ruby programmers.
+  state_region: 
+  lat: 28.6
+  membership_size: 35
+- city: Sebastopol
+  name: North Bay Ruby Users Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/106/calendar/ical/
+  subdomain: sebastopol
+  country: us
+  website_url: http://ruby.meetup.com/106/
+  lng: -122.85
+  established_on: 2007-06-05
+  description: Meet other local Ruby programmers. We meet on the Third Thursday of every month at the O'Reilly headquarters in Sebastopol and are open to anyone developing with, or interested in, Ruby and Ruby on Rails. Pizza is served.
+  state_region: CA
+  lat: 38.4
+  membership_size: 34
+- city: Grand Rapids
+  name: The Michigan Ruby Users Group (Grand Rapids)
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/46/calendar/ical/
+  subdomain: grand_rapids
+  country: us
+  website_url: http://ruby.meetup.com/46/
+  lng: -85.66
+  established_on: 2005-02-16
+  description: Meet other local Ruby programmers.
+  state_region: MI
+  lat: 42.87
+  membership_size: 32
+- city: Ashburn
+  name: The Northern Virginia Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/93/calendar/ical/
+  subdomain: ashburn
+  country: us
+  website_url: http://ruby.meetup.com/93/
+  lng: -77.49
+  established_on: 2007-02-04
+  description: The Northern Virginia Ruby MeetUp is dedicated to Ruby, Ruby on Rails and Web 2.0.
+  state_region: VA
+  lat: 39.03
+  membership_size: 31
+- city: Portland
+  name: The Portland Maine Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/66/calendar/ical/
+  subdomain: portland
+  country: us
+  website_url: http://ruby.meetup.com/66/
+  lng: -70.26
+  established_on: 2005-11-03
+  description: Meet other local Ruby programmers.
+  state_region: ME
+  lat: 43.66
+  membership_size: 31
+- city: Manchester
+  name: The Connecticut Ruby on Rails Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/92/calendar/ical/
+  subdomain: manchester
+  country: us
+  website_url: http://ruby.meetup.com/92/
+  lng: -72.52
+  established_on: 2007-01-18
+  description: Why aren't there any Ruby on Rails groups in Connecticut? Well, there's one now! I even got my company, Start Us Up, to sponsor it. Hi, I'm Theron Parlin, author of the HappyCodr Rails showcase at happycodr.com, and I'd like to invite you to the Connecticut Ruby on Rails group.
+  state_region: CT
+  lat: 41.78
+  membership_size: 29
+- city: Austin
+  name: The Austin Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/97/calendar/ical/
+  subdomain: austin
+  country: us
+  website_url: http://ruby.meetup.com/97/
+  lng: -97.76
+  established_on: 2007-02-20
+  description: Love Ruby? Love Matz? Love Rails? No one loves DHH (just kidd'n). Can't make AustinRuby's lunches? Can't make Austinrails.org's meetings?
+  state_region: TX
+  lat: 30.29
+  membership_size: 28
+- city: Cary
+  name: erlounge RDU
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/109/calendar/ical/
+  subdomain: cary
+  country: us
+  website_url: http://ruby.meetup.com/109/
+  lng: -78.8
+  established_on: 2007-06-22
+  description: Learn more about Erlang, the highly concurrent programming language. Have a chance to meet other developers interested in Erlang, talk about interesting hacks and generally talk shop.
+  state_region: NC
+  lat: 35.81
+  membership_size: 25
+- city: Kansas City
+  name: The Kansas City Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/113/calendar/ical/
+  subdomain: kansas_city
+  country: us
+  website_url: http://ruby.meetup.com/113/
+  lng: -94.59
+  established_on: 2007-07-18
+  description: Meet other local Ruby programmers. Take about tech and have a good time.
+  state_region: MO
+  lat: 39.04
+  membership_size: 24
+- city: Nashville
+  name: The Nashville Ruby on Rails / Agile Software Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/110/calendar/ical/
+  subdomain: nashville
+  country: us
+  website_url: http://ruby.meetup.com/110/
+  lng: -86.96
+  established_on: 2007-06-23
+  description: "The Nashville Ruby on Rails / Agile Software Meetup Group exists to bring together software developers, web app developers, & ui designers in the Nashville, TN area.  "
+  state_region: TN
+  lat: 36.06
+  membership_size: 24
+- city: Seattle
+  name: The Seattle Ruby Network
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/111/calendar/ical/
+  subdomain: seattle
+  country: us
+  website_url: http://ruby.meetup.com/111/
+  lng: -122.3
+  established_on: 2007-07-02
+  description: This group is for anyone interested in Ruby or Rails. Are you looking to learn Ruby? Share some tips and tricks with others who are more experienced? Show off your new projects and get feedback from other professionals? Maybe just locate some fun freelance work, an internship, or a PT or FT Job?
+  state_region: WA
+  lat: 47.72
+  membership_size: 19
+- city: Mundelein
+  name: Chicago Area Groovy Java VM Users
+  feeds: 
+    ics: 
+      uri: http://java.meetup.com/165/calendar/ical/
+  subdomain: mundelein
+  country: us
+  website_url: http://java.meetup.com/165/
+  lng: -88.06
+  established_on: 2007-05-30
+  description: stay sharp | feel the pulse
+  state_region: IL
+  lat: 42.27
+  membership_size: 16
+- city: Grapevine
+  name: Grapevine Ruby and Rails
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/98/calendar/ical/
+  subdomain: grapevine
+  country: us
+  website_url: http://ruby.meetup.com/98/
+  lng: -97.1
+  established_on: 2007-02-24
+  description: "We're focused on Ruby and other dynamic object-oriented programming languages, on and off the 'rails'. "
+  state_region: TX
+  lat: 32.93
+  membership_size: 15
+- city: Camp Hill
+  name: Harrisburg Ruby Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/102/calendar/ical/
+  subdomain: camp_hill
+  country: us
+  website_url: http://ruby.meetup.com/102/
+  lng: -76.93
+  established_on: 2007-04-30
+  description: "Meetup and hack Ruby and Rails with other local programmers. Our mailing list is here:"
+  state_region: PA
+  lat: 40.24
+  membership_size: 15
+- city: Arlington
+  name: Arlington Rubyists and Ruby on Rails Developers
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/80/calendar/ical/
+  subdomain: arlington
+  country: us
+  website_url: http://ruby.meetup.com/80/
+  lng: -77.12
+  established_on: 2006-08-09
+  description: Discuss using Ruby, Ruby on Rails, and Web 2.0 for the creation of new applications and technologies.  If you're an entrepreneur interested in the creation of new Ruby/Rails applications and writing the next "big-thing" with the expressive power of Ruby then you are invited to join.
+  state_region: VA
+  lat: 38.88
+  membership_size: 14
+- city: Blacksburg
+  name: Blacksburg Ruby User Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/104/calendar/ical/
+  subdomain: blacksburg
+  country: us
+  website_url: http://ruby.meetup.com/104/
+  lng: -80.41
+  established_on: 2007-05-24
+  description: Meet other local Ruby and Rails programmers and talk design, deployment, learning Ruby, and a little bit about your newest projects.
+  state_region: VA
+  lat: 37.23
+  membership_size: 13
+- city: Brooklyn
+  name: NYC Ruby on Rails at deepVertical
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/101/calendar/ical/
+  subdomain: brooklyn
+  country: us
+  website_url: http://ruby.meetup.com/101/
+  lng: -73.97
+  established_on: 2007-04-17
+  description: Meet other local Ruby on Rails programmers. Emphasis on Ruby on Rails.  Share code. 3 presentations per meeting.  Discuss trends, open source plug-ins and rails hosting issues.  We had one meeting in the Fall of 2006 and are now scheduling meetings for June.  Details to follow.
+  state_region: NY
+  lat: 40.62
+  membership_size: 13
+- city: State College
+  name: State College Ruby Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/107/calendar/ical/
+  subdomain: state_college
+  country: us
+  website_url: http://ruby.meetup.com/107/
+  lng: -77.84
+  established_on: 2007-06-15
+  description: "Have you heard of the Ruby programming language, or Ruby on Rails, the web development framework? Whether you create software or websites for a living, are a graphic designer, student, or are just looking to learn more about computer programming, these tools are well worth taking a look at. "
+  state_region: PA
+  lat: 40.8
+  membership_size: 8
+- city: Boca Raton
+  name: The Boca Raton Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/116/calendar/ical/
+  subdomain: boca_raton
+  country: us
+  website_url: http://ruby.meetup.com/116/
+  lng: -80.1
+  established_on: 2007-08-18
+  description: Meet other local Ruby programmers, share knowledge about Ruby and Ruby on Rails while growing the local Ruby scene.
+  state_region: FL
+  lat: 26.4
+  membership_size: 8
+- city: Jupiter
+  name: Florida Semantic Web (FSW) Meetup Group - South East Region
+  feeds: 
+    ics: 
+      uri: http://semweb.meetup.com/28/calendar/ical/
+  subdomain: jupiter
+  country: us
+  website_url: http://semweb.meetup.com/28/
+  lng: -80.12
+  established_on: 2007-06-21
+  description: Florida Semantic Web (FSW) Meetup Group - South East Region which includes Miami, Ft. Lauderdale, Palm Beach, Jupiter, Stuart.  This is a forum in which South East Florida Area people interested in the Semantic Web can meet each other and learn more about this fascinating area of research and its applications. Our discussion will include all Semantic Web technologies with a focus on current projects and potential project and startup opportunities. Discussions may vary in technicality, those interested in business applications/functio nality or the technically minded who are new to the Semantic Web are encouraged to attend. The suggested level of technical expertise to participate in discussions and presentations will be indicated in each meetup description.
+  state_region: FL
+  lat: 26.94
+  membership_size: 6
+- city: Bergen
+  name: Bergen Coding Dojo
+  feeds: 
+    ics: 
+      uri: http://softwaredev.meetup.com/78/calendar/ical/
+  subdomain: bergen
+  country: "no"
+  website_url: http://softwaredev.meetup.com/78/
+  lng: 5.34
+  established_on: 2007-08-23
+  description: "Form\xE5let med denne gruppen er \xE5 samle en liten, eksklusiv gjeng med interesserte utviklere for \xE5 l\xE6re av hverandre."
+  state_region: 
+  lat: 60.38
+  membership_size: 3
+- city: Pleasant Valley
+  name: Hudson Valley Ruby Brigade
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/114/calendar/ical/
+  subdomain: pleasant_valley
+  country: us
+  website_url: http://ruby.meetup.com/114/
+  lng: -73.82
+  established_on: 2007-08-03
+  description: Meet other local Ruby programmers.  Monthly meetups, and spontaneous code hacking sessions.
+  state_region: NY
+  lat: 41.75
+  membership_size: 2
+- city: Bangkok
+  name: The Bangkok Ruby Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/103/calendar/ical/
+  subdomain: bangkok
+  country: th
+  website_url: http://ruby.meetup.com/103/
+  lng: 100.5
+  established_on: 2007-05-17
+  description: Meet other local Ruby and Ruby on Rails software programmers.
+  state_region: 
+  lat: 13.73
+  membership_size: 2
+- city: Perris
+  name: Riverside Ruby Army
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/115/calendar/ical/
+  subdomain: perris
+  country: us
+  website_url: http://ruby.meetup.com/115/
+  lng: -117.34
+  established_on: 2007-08-09
+  description: Meet with other Ruby on Rails engineers!
+  state_region: CA
+  lat: 33.78
+  membership_size: 1
