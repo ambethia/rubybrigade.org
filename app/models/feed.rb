@@ -4,6 +4,9 @@ class Feed < ActiveRecord::Base
   USER_AGENT = "rubybrigade.org/0.1"
   
   def sync
+    self.class.transaction do
+      
+    end
   end
   
   protected

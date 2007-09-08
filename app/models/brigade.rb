@@ -3,6 +3,9 @@ class Brigade < ActiveRecord::Base
 
   has_one :rss_feed, :class_name => "RSS"
   has_one :calendar, :class_name => "ICS"
+  
+  has_many :headlines, :through => :rss_feed
+  has_many :events,    :through => :calendar
 
   attr_writer      :feeds
   after_create     :create_feeds
