@@ -1,6 +1,8 @@
 <h1>RubyBrigade</h1>
 
+<script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>
 <script type="text/javascript">
+google.load("maps", "2");
 
 function initialize() {
   if (GBrowserIsCompatible()) {
@@ -19,7 +21,6 @@ function initialize() {
 
 Event.observe(window, 'load', initialize);
 Event.observe(window, 'unload', GUnload);
-
 </script>
 
 <div id="map_canvas" style="width: 500px; height: 300px"></div>

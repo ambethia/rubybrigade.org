@@ -43,7 +43,7 @@ class BrigadesController < ApplicationController
     @brigade = Brigade.new(params[:brigade])
 
     respond_to do |format|
-      if @brigade.save
+      if verify_recaptcha(@brigade) && @brigade.save
         flash[:notice] = 'Brigade was successfully created.'
         format.html { redirect_to(@brigade) }
         format.xml  { render :xml => @brigade, :status => :created, :location => @brigade }
@@ -60,7 +60,7 @@ class BrigadesController < ApplicationController
     @brigade = Brigade.find(params[:id])
 
     respond_to do |format|
-      if @brigade.update_attributes(params[:brigade])
+      if verify_recaptcha(@brigade) && @brigade.update_attributes(params[:brigade])
         flash[:notice] = 'Brigade was successfully updated.'
         format.html { redirect_to(@brigade) }
         format.xml  { head :ok }
