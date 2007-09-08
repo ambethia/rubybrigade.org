@@ -29,7 +29,7 @@ set :deploy_to, "/var/www/apps/#{application}"
 # XXX we may not need this - it doesn't work on windows
 set :user, "deploy"
 
-set :repository, "https://svn.railsrumble.com/paintitred/trunk"
+set :repository, "https://jasper:W7vJrfT1d4@svn.railsrumble.com/paintitred/trunk"
 set :rails_env, "production"
 
 # Automatically symlink these directories from current/public to shared/public.

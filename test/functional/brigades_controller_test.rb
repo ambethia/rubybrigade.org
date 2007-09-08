@@ -26,7 +26,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
   
   def test_should_create_brigade
     old_count = Brigade.count
-    post :create, :brigade => { }
+    post :create, :brigade => { :city => "St Petersburg" }
     assert_equal old_count+1, Brigade.count
     
     assert_redirected_to brigade_path(assigns(:brigade))

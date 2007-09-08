@@ -21,6 +21,9 @@ Rails::Initializer.run do |config|
 
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
+  config.load_paths += Dir["#{RAILS_ROOT}/vendor/gems/**"].map do |dir| 
+    File.directory?(lib = "#{dir}/lib") ? lib : dir
+  end
 
   # Force all environments to use the same logger level
   # (by default production uses :info, the others :debug)
@@ -29,7 +32,7 @@ Rails::Initializer.run do |config|
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   config.action_controller.session = {
-    :session_key => '_trunk_session',
+    :session_key => '_rubybrigade_session',
     :secret      => 'c459720a5c2784dc24acf43707c082a4'
   }
 
