@@ -1,17 +1,33 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+--- 
+feed_00003: 
+  uri: ""
+  updated_at: 2007-09-08 11:55:59 -04:00
+  type: RSS
+  id: 3
+  brigade_id: 2
+  last_checked_at: 
+  created_at: 2007-09-08 11:21:03 -04:00
+feed_00004: 
+  uri: ""
+  updated_at: 2007-09-08 11:55:59 -04:00
+  type: ICS
+  id: 4
+  brigade_id: 2
+  last_checked_at: 
+  created_at: 2007-09-08 11:21:03 -04:00
+feed_00001: 
+  uri: ""
+  updated_at: 2007-09-08 11:43:58 -04:00
+  type: RSS
   id: 1
-  uri: MyString
-  last_checked_at: 2007-09-08 07:19:37
   brigade_id: 1
-  type: MyString
-  created_at: 2007-09-08 07:19:42
-  updated_at: 2007-09-08 07:19:42
-two:
+  last_checked_at: 
+  created_at: 2007-09-08 11:19:54 -04:00
+feed_00002: 
+  uri: webcal://ruby.meetup.com/73/calendar/ical/The+Tampa+Ruby+Brigade/
+  updated_at: 2007-09-08 11:43:58 -04:00
+  type: ICS
   id: 2
-  uri: MyString
-  last_checked_at: 2007-09-08 07:19:37
   brigade_id: 1
-  type: MyString
-  created_at: 2007-09-08 07:19:42
-  updated_at: 2007-09-08 07:19:42
+  last_checked_at: 
+  created_at: 2007-09-08 11:19:54 -04:00

@@ -1,5 +1,33 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+--- 
+tampa: 
   id: 1
-two:
+  name: Tampa Ruby Brigade
+  subdomain: tampa
+  description: Curious about Ruby on Rails? Into web development and want to improve your technique, do things faster and cleaner? Want to learn more and meet others thinking along the same lines in the Tampa Bay area? If so, this is the place.
+  membership_size: 61
+  city: Tampa
+  postal_code: ""
+  website_url: http://tamparuby.com
+  country: USA
+  lng: -82.45929
+  lat: 27.9465
+  state_region: FL
+  established_on: 2007-09-08
+  created_at: 2007-09-08 11:19:54 -04:00
+  updated_at: 2007-09-08 11:43:58 -04:00
+portland: 
   id: 2
+  name: PDX Ruby
+  subdomain: portland
+  description: pdx.rb is a gathering of Ruby programmers in the Portland, Oregon, area.
+  membership_size: 75
+  city: Portland
+  state_region: OR
+  country: USA
+  postal_code: ""
+  website_url: ""
+  lng: -122.67568
+  lat: 45.51181
+  established_on: 2007-09-08
+  created_at: 2007-09-08 11:21:03 -04:00
+  updated_at: 2007-09-08 11:55:59 -04:00
