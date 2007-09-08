@@ -6,11 +6,11 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Brigades: <%= controller.action_name %></title>
   <%= javascript_include_tag 'prototype' %>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'scaffold', 'screen' %>
 </head>
 <body>
 
-<div id="content">
+<div id="container">
   <p style="color: green"><%= flash[:notice] %></p>
 
   <%= yield  %>

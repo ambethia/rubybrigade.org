@@ -9,6 +9,9 @@ function initialize() {
     var map = new GMap2(document.getElementById("map_canvas"));
     map.setCenter(new GLatLng(38.25, -99.53), 3);
     
+    map.addControl(new GMapTypeControl());
+    map.addControl(new GLargeMapControl());
+    
     var points = <%= @brigades.map{|b| [b.lat, b.lng]}.to_json %>;
     
     for(var i = 0; i < points.length; i++) {
@@ -24,10 +27,10 @@ Event.observe(window, 'load', initialize);
 </script>
 
 <% form_tag({:action => 'search'}, :method => 'get') do %>
-  Where are you? <%= text_field_tag 'search', params[:search] %> <%= submit_tag 'Find a Brigade!' %>
+  <p>Where are you? <%= text_field_tag 'search', params[:search] %> <%= submit_tag 'Find a Brigade!' %></p>
 <% end %>
 
-<div id="map_canvas" style="width: 500px; height: 300px"></div>
+<div id="map_canvas" style="width: 600px; height: 375px"></div>
 
 <table>
   <tr>
