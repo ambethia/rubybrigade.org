@@ -30,7 +30,7 @@ set :deploy_to, "/var/www/apps/#{application}"
 set :user, "deploy"
 
 set :repository, "https://svn.railsrumble.com/paintitred/trunk"
-set :svn_user, "jasper"
+set :svn_username, "jasper"
 set :svn_password, "W7vJrfT1d4"
 
 set :rails_env, "production"
