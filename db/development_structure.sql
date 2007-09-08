@@ -15,6 +15,7 @@ CREATE TABLE `brigades` (
   `lng` decimal(15,10) default NULL,
   `created_at` datetime default NULL,
   `updated_at` datetime default NULL,
+  `subdomain` varchar(255) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -22,4 +23,4 @@ CREATE TABLE `schema_info` (
   `version` int(11) default NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO schema_info (version) VALUES (1)
+INSERT INTO schema_info (version) VALUES (2)

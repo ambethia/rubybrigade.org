@@ -82,4 +82,14 @@ class BrigadesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def search
+    @brigades = Brigade.find :all, 
+                             :origin => params[:search], 
+  	                         :within => 10
+    respond_to do |format|
+      format.html { render :template => 'brigades/index'}
+      format.xml  { render :xml => @brigades }
+    end
+  end
 end

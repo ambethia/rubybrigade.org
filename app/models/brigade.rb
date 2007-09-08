@@ -1,5 +1,5 @@
 class Brigade < ActiveRecord::Base
-  acts_as_mappable :auto_geocode => {:field => :location, :error_message => 'Could not geocode location'}
+  acts_as_mappable :auto_geocode => {:field => :location, :error_message => 'could not be geocoded with information you provided.'}
 
   def location
     "#{city} #{state_region} #{country}"

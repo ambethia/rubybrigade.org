@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :brigades
+  map.resources :brigades, :collection => { :search => :get }
 
   # The priority is based upon order of creation: first created -> highest priority.
 
