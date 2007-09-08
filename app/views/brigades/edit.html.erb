@@ -1,0 +1,13 @@
+<h1>Editing brigade</h1>
+
+<%= error_messages_for :brigade %>
+
+<% form_for(@brigade) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @brigade %> |
+<%= link_to 'Back', brigades_path %>
