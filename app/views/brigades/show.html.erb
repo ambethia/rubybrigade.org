@@ -11,10 +11,10 @@
   <%= @brigade.website_url %></p>
 
 <p><label>RSS:</label>
-  <%= @brigade.rss_url %></p>
+  <%= @brigade.rss_feed.uri %></p>
 
 <p><label>iCal:</label>
-  <%= @brigade.ical_url %></p>
+  <%= @brigade.calendar.uri %></p>
 
 <p><label>Established:</label>
   <%= @brigade.established_on %></p>

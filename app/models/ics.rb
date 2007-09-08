@@ -1,0 +1,2 @@
+class ICS < Feed
+end

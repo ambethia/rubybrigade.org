@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  uri: MyString
+  last_checked_at: 2007-09-08 07:19:37
+  brigade_id: 1
+  type: MyString
+  created_at: 2007-09-08 07:19:42
+  updated_at: 2007-09-08 07:19:42
+two:
+  id: 2
+  uri: MyString
+  last_checked_at: 2007-09-08 07:19:37
+  brigade_id: 1
+  type: MyString
+  created_at: 2007-09-08 07:19:42
+  updated_at: 2007-09-08 07:19:42

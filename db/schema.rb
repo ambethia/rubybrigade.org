@@ -2,15 +2,13 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "brigades", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "membership_size"
     t.string   "website_url"
-    t.string   "rss_url"
-    t.string   "ical_url"
     t.date     "established_on"
     t.string   "city"
     t.string   "state_region"
