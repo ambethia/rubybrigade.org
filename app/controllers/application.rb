@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
   
   def disallow_subdomain
     if request.domain == "rubybrigade.org" && request.subdomains.length > 0
-      redirect_to "http://" + "rubybrigade.org#{request.port != 80 ? ":#{request.port}" : ""}" + request.request_uri 
+      url  = "http://rubybrigade.org"
+      url += ":#{request.port}" unless request.port == 80 # include the port unless it's 80, so it works in development mode :)
+      url += request.request_uri
+
+      redirect_to url
     end
   end
   
