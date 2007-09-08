@@ -1,4 +1,28 @@
-<h1>Listing brigades</h1>
+<h1>RubyBrigade</h1>
+
+<script type="text/javascript">
+
+function initialize() {
+  if (GBrowserIsCompatible()) {
+    var map = new GMap2(document.getElementById("map_canvas"));
+    map.setCenter(new GLatLng(38.25, -99.53), 3);
+    
+    var points = <%= @brigades.map{|b| [b.lat, b.lng]}.to_json %>;
+    
+    for(var i = 0; i < points.length; i++) {
+      var point = new GLatLng(points[i][0], points[i][1]);
+      map.addOverlay(new GMarker(point));
+    }
+    
+  }
+}
+
+Event.observe(window, 'load', initialize);
+Event.observe(window, 'unload', GUnload);
+
+</script>
+
+<div id="map_canvas" style="width: 500px; height: 300px"></div>
 
 <table>
   <tr>
