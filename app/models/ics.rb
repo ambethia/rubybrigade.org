@@ -5,7 +5,7 @@ class ICS < Feed
     @parsed ||= Vpim::Icalendar.decode(self.fetch)
   end
   
-  # Create Headline objects from feed items
+  # Create Event objects from iCal items
   def transmogrify
     returning Array.new do |events|
       parse.map(&its.components(Vpim::Icalendar::Vevent)).flatten.each do |event|
