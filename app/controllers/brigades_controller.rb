@@ -1,12 +1,19 @@
 class BrigadesController < ApplicationController
+  before_filter :disallow_subdomain, :except => [:index, :search]
+  
   # GET /brigades
   # GET /brigades.xml
   def index
-    @brigades = Brigade.find(:all)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @brigades }
+    if request.subdomains.length > 0 && request.subdomains.first != 'www'
+      params[:search] = request.subdomains.first
+      search
+    else
+      @brigades = Brigade.find(:all)
+    
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @brigades }
+      end
     end
   end
 
@@ -84,12 +91,34 @@ class BrigadesController < ApplicationController
   end
   
   def search
-    @brigades = Brigade.find :all, 
-                             :origin => params[:search], 
-  	                         :within => 10
-    respond_to do |format|
-      format.html { render :template => 'brigades/index'}
-      format.xml  { render :xml => @brigades }
+    # first search by subdomain slug field
+    @brigade = Brigade.find_by_subdomain(params[:search])
+    if @brigade
+      respond_to do |format|
+        format.html { redirect_to(@brigade) }
+        format.xml  { render :xml => @brigade }
+      end
+    
+    # if still unknown, geocode search string and search
+    else
+      @brigades = Brigade.find :all, 
+                               :origin => params[:search], 
+  	                           :within => 10
+  	
+    	# if only one result, redirect to it
+    	if @brigades.length == 1
+        respond_to do |format|
+          format.html { redirect_to(@brigades[0]) }
+          format.xml  { render :xml => @brigades[0] }
+        end
+  	  else
+        respond_to do |format|
+          format.html { render :template => 'brigades/index'}
+          format.xml  { render :xml => @brigades }
+        end
+      end
     end
+    
   end
+  
 end
