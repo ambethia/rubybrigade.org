@@ -101,8 +101,10 @@ class BrigadesController < ApplicationController
     
     # if still unknown, geocode search string and search
     else
+      # remove all non word characters or underscores
+      search_to_geocode = params[:search].gsub(/\W/, ' ').gsub(/_/, ' ')
       @brigades = Brigade.find :all, 
-                               :origin => params[:search], 
+                               :origin => search_to_geocode, 
   	                           :within => 10
   	
     	# if only one result, redirect to it
