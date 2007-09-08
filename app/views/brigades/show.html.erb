@@ -1,3 +1,23 @@
+<h1><%= @brigade.name %></h1>
+<h3><%= @brigade.location %></h3>
+
+<p><label>Description:</label>
+  <%= @brigade.description %></p>
+
+<p><label>Membership:</label>
+  <%= @brigade.membership_size %></p>
+
+<p><label>Website:</label>
+  <%= @brigade.website_url %></p>
+
+<p><label>RSS:</label>
+  <%= @brigade.rss_url %></p>
+
+<p><label>iCal:</label>
+  <%= @brigade.ical_url %></p>
+
+<p><label>Established:</label>
+  <%= @brigade.established_on %></p>
 
 <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
 <%= link_to 'Back', brigades_path %>
