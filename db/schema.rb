@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "brigades", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,38 @@ ActiveRecord::Schema.define(:version => 2) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "subdomain"
+  end
+
+  create_table "feed_items", :force => true do |t|
+    t.string   "summary"
+    t.text     "description"
+    t.string   "uri"
+    t.text     "location"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feeds", :force => true do |t|
+    t.string   "uri"
+    t.datetime "last_checked_at"
+    t.integer  "brigade_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "logged_exceptions", :force => true do |t|
+    t.string   "exception_class"
+    t.string   "controller_name"
+    t.string   "action_name"
+    t.text     "message"
+    t.text     "backtrace"
+    t.text     "environment"
+    t.text     "request"
+    t.datetime "created_at"
   end
 
 end
