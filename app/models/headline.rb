@@ -1,2 +1,3 @@
 class Headline < FeedItem
+
 end

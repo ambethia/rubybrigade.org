@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "brigades", :force => true do |t|
     t.string   "name"
@@ -31,7 +31,9 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "feed_id",     :null => false
+    t.integer  "feed_id",      :null => false
+    t.string   "guid"
+    t.datetime "published_at"
   end
 
   add_index "feed_items", ["feed_id"], :name => "index_feed_items_on_feed_id"
@@ -43,6 +45,7 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "logged_exceptions", :force => true do |t|
