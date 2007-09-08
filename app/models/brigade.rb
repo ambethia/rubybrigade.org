@@ -19,9 +19,11 @@ class Brigade < ActiveRecord::Base
   end
   
   def after_initialize
-    @feeds ||= {}
-    build_rss_feed(@feeds[:rss]) if rss_feed.nil?
-    build_calendar(@feeds[:ics]) if calendar.nil?
+    if new_record?
+      @feeds ||= {}
+      build_rss_feed(@feeds[:rss]) if rss_feed.nil?
+      build_calendar(@feeds[:ics]) if calendar.nil?
+    end
   end
 
   def location

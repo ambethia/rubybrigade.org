@@ -1,30 +1,40 @@
-<h1>RubyBrigade</h1>
-
 <script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>
 <script type="text/javascript">
 google.load("maps", "2");
 
+function createMarker(map, point, brigade) {
+  var marker = new GMarker(point);
+  GEvent.addListener(marker, "click", function() {
+    marker.openInfoWindowHtml("<a href=\"/brigades/" + brigade.id + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
+      {maxWidth: 230});
+  });
+  return marker;
+}
+
 function initialize() {
   if (GBrowserIsCompatible()) {
-    var map = new GMap2(document.getElementById("map_canvas"));
+    map = new GMap2(document.getElementById("map_canvas"));
     map.setCenter(new GLatLng(38.25, -99.53), 3);
     
     map.addControl(new GMapTypeControl());
     map.addControl(new GLargeMapControl());
     
-    var points = <%= @brigades.map{|b| [b.lat, b.lng]}.to_json %>;
+    var brigades = <%= points_for_mapping(@brigades) %>;
     
-    for(var i = 0; i < points.length; i++) {
-      var point = new GLatLng(points[i][0], points[i][1]);
-      map.addOverlay(new GMarker(point));
+    for(var i = 0; i < brigades.length; i++) {
+      var brigade = brigades[i];
+      var point = new GLatLng(brigade.lat, brigade.lng);
+      map.addOverlay(createMarker(map, point, brigade));
     }
     
   }
 }
 
 Event.observe(window, 'load', initialize);
-//Event.observe(window, 'unload', GUnload);
+Event.observe(window, 'unload', function() { GUnload(); });
 </script>
+
+<h1>RubyBrigade</h1>
 
 <% form_tag({:action => 'search'}, :method => 'get') do %>
   <p>Where are you? <%= text_field_tag 'search', params[:search] %> <%= submit_tag 'Find a Brigade!' %></p>
