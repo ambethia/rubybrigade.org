@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Tampa.rb</title>
+    <link>http://tamparuby.com/feed.xml</link>
+    <description>Tampa Ruby Brigade</description>
+    <language>en-us</language>
+    <pubDate>Sat, 8 Sep 2007 11:00:00 EST</pubDate>
+    <lastBuildDate>Sat, 8 Sep 2007 11:00:00 EST</lastBuildDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <generator uri="http://mephistoblog.com" version="0.7.3">Mephisto Noh-Varr</generator>
+    <managingEditor>scott@paint.itred.org</managingEditor>
+    <webMaster>jason@paint.itred.org</webMaster>
+    <item>
+      <title>Syntactic Sugar</title>
+      <link>http://tamparuby.com/posts/2</link>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.</description>
+      <pubDate>Sat, 8 Sep 2007 11:00:00 EST</pubDate>
+      <guid>http://tamparuby.com/posts/2</guid>
+    </item>
+    <item>
+      <title>Hello World!</title>
+      <link>http://tamparuby.com/posts/1</link>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.</description>
+      <pubDate>Sat, 6 Sep 2007 11:00:00 EST</pubDate>
+      <guid>http://tamparuby.com/posts/1</guid>
+    </item>
+  </channel>
+</rss>

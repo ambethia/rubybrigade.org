@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+PRODID:-//Meetup Inc//RemoteApi//EN
+VERSION:2.0
+METHOD:PUBLISH
+CALSCALE:GREGORIAN
+X-ORIGINAL-URL:http://ruby.meetup.com/73/calendar/ical/The+Tampa+Ruby+Briga
+ de/
+X-WR-CALNAME:Events - The Tampa Ruby Brigade
+BEGIN:VEVENT
+SUMMARY:September '07
+DESCRIPTION:Ruby Meetups > The Tampa Ruby Brigade\n\nThis month is going to
+  be the best yet. Check it out:\n--------\n\n6:00pm - 7:00pm: Helpdesk - As
+ k the experts for help with your ruby or rails code.\n\n7:00pm - 7:30pm: Ga
+ vin Stark / Real Digital Media\nLessons Learned So Far: Transitioning from 
+ ColdFusion + SQL Server  to  Rails + MySQL and how we organize/manage our s
+ erver environment.\n\n7:30pm - 8:00pm: K. Adam Christensen / Disney\nIntegr
+ ating Ruby into a Java environment\, JRuby\, and more TBD.\n\n8:00pm - 9:00
+ pm: Q&A\, random banter \n\n---------\n\nDriving Directions:\nTake I-275 to
+  the Fowler Avenue exit (#51) and head east\, or take I-75 south to the Fow
+ ler Avenue exit (#265) and head west. The main entrance to the university i
+ s at 4202 East Fowler Avenue. \n\nMore directions: http://www.usf.edu/dir_t
+ pa.html\nCampus Map: http://usfweb2.usf.edu/campus_map/\n\n - Once you pull
+  in the USF main entrance\, go straight past the first light.\n - Go past t
+ he library (large building on your right) and take a right into the parking
+  lot north of the library. [NOTE: Parking services doesn't patrol the lot i
+ n the evenings\, but you might want to read this as "No Lifeguard on Duty" 
+ or "YMMV"]\n - The education building is east of the Library. You may need 
+ to park in the guest area in the parking garage. (Guest permit costs $4) \n
+ \nThe Laptop Lounge is located in room 252 in the Education Building at USF
+ . Get to the second floor and walk around the perimeter hallway to the back
+  side of the building where you should be able to find room 252. If you nee
+ d help finding it\, call (813) 974-6816. \n\nTampa\, FL  33629 - USA\n\nWed
+ nesday\, September 12 at 6:00 PM\n\nPhoto: http://photos1.meetupstatic.com/
+ photos/event/8/e/2/b/event_1956395.jpeg\n\nAttending: 0\n\nDetails: http://
+ ruby.meetup.com/73/calendar/6148530/
+LAST-MODIFIED:20070822T223715Z
+UID:event_6148530@meetup.com
+CLASS:PUBLIC
+CREATED:20070809T000240Z
+DTSTAMP:20070908T160157Z
+DTSTART:20070912T220000Z
+DTEND:20070913T000000Z
+GEO:27.92;-82.51
+LOCATION:USF Laptop Lounge - 4202 E. Fowler Ave\, EDU 252 - Tampa\, FL  336
+ 20 - USA
+URL:http://ruby.meetup.com/73/calendar/6148530/
+END:VEVENT
+END:VCALENDAR
