@@ -24,7 +24,7 @@ Event.observe(window, 'load', initialize);
 </script>
 
 <% form_tag({:action => 'search'}, :method => 'get') do %>
-  Where are you? <%= text_field_tag 'search' %> <%= submit_tag 'Find a Brigade!' %>
+  Where are you? <%= text_field_tag 'search', params[:search] %> <%= submit_tag 'Find a Brigade!' %>
 <% end %>
 
 <div id="map_canvas" style="width: 500px; height: 300px"></div>
