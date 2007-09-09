@@ -3,27 +3,16 @@
 
   <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
     <div id="description">
-     <p><label>Description:</label>
-    <%= @brigade.description %></p>
+     <p><%= @brigade.description %></p>
     </div>
     <div id="details">
+      <h3><%= @brigade.location %></h3>
       <ul>
-        <li><label>Location:</label>
-          <%= @brigade.location %></li>
-        <li><label>Membership:</label>
-          <%= @brigade.membership_size %></li>
-
-        <li><label>Website:</label>
-          <%= @brigade.website_url %></li>
-
-        <li><label>RSS:</label>
-          <%= @brigade.rss_feed.uri %></li>
-
-        <li><label>iCal:</label>
-          <%= @brigade.calendar.uri %></li>
-
-        <li><label>Established:</label>
-          <%= @brigade.established_on %></li>
+        <li>Estimated Size: <%= @brigade.membership_size %></li>
+        <li>Established: <%= @brigade.established_on %></li>
+        <li><a href="<%= @brigade.website_url %>">Website</a></li>
+        <li><a href="<%= @brigade.rss_feed.uri %>">RSS</a></li>
+        <li><a href="<%= @brigade.calendar.uri %>">iCal</a></li>
       </ul>
     </div>
     <br class="large" />
