@@ -4,8 +4,16 @@ class Brigade < ActiveRecord::Base
   has_one :rss_feed, :class_name => "RSS"
   has_one :calendar, :class_name => "ICS"
   
-  has_many :headlines, :through => :rss_feed
-  has_many :events,    :through => :calendar
+  has_many :headlines, :through => :rss_feed, :order => "feed_items.published_at DESC"
+  has_many :events,    :through => :calendar, :order => "feed_items.starts_at ASC" do
+    
+    def upcoming(limit = 5)
+      find :all, :conditions => ["starts_at >= ?", Time.now],
+                 :order      => "starts_at ASC",
+                 :limit      => limit
+    end
+    
+  end
 
   attr_writer      :feeds
   after_create     :create_feeds
@@ -30,6 +38,7 @@ class Brigade < ActiveRecord::Base
   end
   
   def after_initialize
+    # real parameters or a fakey hash.
     @feeds ||= { :rss => {}, :ics => {} }
     @feeds.symbolize_keys!
     if new_record?
