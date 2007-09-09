@@ -11,21 +11,30 @@ class Brigade < ActiveRecord::Base
   after_create     :create_feeds
   after_save       :update_feeds
 
+  class << self
+    
+    def newest(limit = 9)
+      find :all, :order => "created_at DESC", :limit => limit
+    end
+    
+  end
+
   def create_feeds
-    create_rss_feed(@feeds[:rss])
-    create_calendar(@feeds[:ics])
+    create_rss_feed @feeds[:rss].symbolize_keys
+    create_calendar @feeds[:ics].symbolize_keys
   end
   
   def update_feeds
-    rss_feed.update_attributes @feeds[:rss] unless rss_feed.nil?
-    calendar.update_attributes @feeds[:ics] unless calendar.nil?
+    rss_feed.update_attributes @feeds[:rss].symbolize_keys unless rss_feed.nil?
+    calendar.update_attributes @feeds[:ics].symbolize_keys unless calendar.nil?
   end
   
   def after_initialize
-    @feeds ||= {}
+    @feeds ||= { :rss => {}, :ics => {} }
+    @feeds.symbolize_keys!
     if new_record?
-      build_rss_feed(@feeds[:rss]) if rss_feed.nil?
-      build_calendar(@feeds[:ics]) if calendar.nil?
+      build_rss_feed(@feeds[:rss].symbolize_keys) if rss_feed.nil?
+      build_calendar(@feeds[:ics].symbolize_keys) if calendar.nil?
     end
   end
 

@@ -24,7 +24,7 @@ class Feed < ActiveRecord::Base
     def fetch
       uri  = URI.parse(self["uri"])
       http = Net::HTTP.new(uri.host,uri.port)
-      http.get(uri.path, 'User-Agent' => USER_AGENT).body
+      http.get(uri.path, 'User-Agent' => USER_AGENT)
     end
   
 end

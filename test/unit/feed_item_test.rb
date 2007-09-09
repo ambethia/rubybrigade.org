@@ -4,6 +4,8 @@ require File.dirname(__FILE__) + '/../mocks/test/http'
 class FeedItemTest < Test::Unit::TestCase
   
   def setup
+    # Because we're loading files in the test, not a real HTTP response
+    File.any_instance.stubs(:code).returns("200")
     @brigade = Brigade.create(
       :name => "Tampa.rb",
       :city => "Tampa",

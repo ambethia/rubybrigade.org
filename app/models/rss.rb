@@ -1,6 +1,11 @@
 class RSS < Feed
   has_many :headlines, :foreign_key => "feed_id", :dependent => :destroy
   
+  def fetch
+    response = super
+    response.code == "200" ? response.body : "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel></channel></rss>"
+  end
+  
   def sync
     self.title = parse.title
     super
@@ -8,7 +13,7 @@ class RSS < Feed
   
   def parse
     # Cache it while the object is alive in memory
-    @parsed ||= SimpleRSS.parse(self.fetch)
+    @parsed ||= SimpleRSS.parse(fetch) 
   end
   
   # Create Headline objects from feed items
@@ -25,4 +30,5 @@ class RSS < Feed
       end
     end
   end
+  
 end

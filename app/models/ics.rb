@@ -1,8 +1,13 @@
 class ICS < Feed
   has_many :events, :foreign_key => "feed_id", :dependent => :destroy
   
+  def fetch
+    response = super
+    response.code == "200" ? response.body : ""
+  end
+  
   def parse
-    @parsed ||= Vpim::Icalendar.decode(self.fetch)
+    @parsed ||= Vpim::Icalendar.decode(fetch)
   end
   
   # Create Event objects from iCal items
