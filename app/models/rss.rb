@@ -10,7 +10,7 @@ class RSS < Feed
   
     def fetch
       body = super
-      body.blank? ? "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel></channel></rss>" : body
+      body.blank? ? "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel><title></title></channel></rss>" : body
     end
 
 
