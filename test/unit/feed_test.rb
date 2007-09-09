@@ -47,4 +47,13 @@ class FeedTest < Test::Unit::TestCase
     end
   end
   
+  def test_should_return_empty_string_when_calling_fetch_on_ics
+    assert_equal "", ICS.new.send('fetch')
+  end
+  
+  def test_should_return_empty_rss_xml_packet_when_calling_fetch_on_rss
+    assert_equal "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel><title></title></channel></rss>", RSS.new.send('fetch')
+  end
+  
+  
 end
