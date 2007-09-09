@@ -20,6 +20,10 @@ class Brigade < ActiveRecord::Base
   after_save       :update_feeds
   
   validates_presence_of :name
+  validates_presence_of :rss_feed
+  validates_presence_of :calendar
+  
+  validates_uniqueness_of :subdomain, :allow_blank => true
 
   class << self
     
