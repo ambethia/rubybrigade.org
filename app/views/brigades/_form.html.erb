@@ -33,21 +33,14 @@
   <p>City<br />
   <%= f.text_field 'city' %></p>
 
-  <p>State<br />
-  <%= f.text_field 'state_region' %></p>    
+  <p>State or Region<br />
+  <%= f.text_field 'state_region' %></p>
 
   <p>Country<br />
-  <%= f.text_field 'country' %></p>
+  <%= f.select 'country', @countries, :include_blank => true %></p>
 
-  <p>Postal Code<br />
+  <p>Postal (ZIP) Code<br />
   <%= f.text_field 'postal_code' %></p>
-
-  <p>Lat<br />
-  <%= f.text_field 'lat' %></p>
-
-  <p>Long<br />
-  <%= f.text_field 'lng' %></p>
-
 </fieldset>
 
 <%= recaptcha_tags %>

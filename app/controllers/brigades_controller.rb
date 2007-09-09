@@ -4,6 +4,7 @@ class BrigadesController < ApplicationController
 
   before_filter :disallow_subdomain, :except => [:index, :search]
   before_filter :ensure_domain,      :only   => [:index, :search]
+  before_filter :load_countries,     :only   => [:new,   :edit, :update, :create]
   
   # GET /brigades
   # GET /brigades.xml
@@ -157,6 +158,13 @@ class BrigadesController < ApplicationController
     def load_new_brigades_and_events
       @upcoming_events = Event.upcoming
       @newest_brigades = Brigade.newest
+    end
+    
+    def load_countries
+      data       = YAML.load File.open(RAILS_ROOT+"/lib/countries.yml")
+      @countries = data.map(&it).map do |country|
+        [country["printable_name"], country["iso"]]
+      end
     end
     
 end
