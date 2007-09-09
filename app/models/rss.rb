@@ -13,7 +13,6 @@ class RSS < Feed
       body.blank? ? "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel><title></title></channel></rss>" : body
     end
 
-
     def parse
       # Cache it while the object is alive in memory
       @parsed ||= SimpleRSS.parse(fetch) 
