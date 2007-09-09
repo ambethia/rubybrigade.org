@@ -1,5 +1,5 @@
-  <div id="primary">  
-    <div id="search-box">
+  <% content_for :primary do %>
+    <div id="header2">
       <% form_tag({:action => 'search'}, :method => 'get') do %>
         <p>
           <label for="search" id="search-label">Location</label>
@@ -8,13 +8,13 @@
         </p>
       <% end %>
     </div>
-    <div id="map"><div id="map-inner"><div id="map_canvas"></div></div></div>
-  </div>
-  <div id="secondary">
+    <div id="map" class="large"><div id="map-inner" class="large"><div id="map_canvas" class="large"></div></div></div>
+  <% end %>
+  <% content_for :secondary do %>
     <div id="quote-wrapper">
       <div id="quote">
-        <p>&#8220;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis nibh turpis, accumsan eu, iaculis in, tincidunt id, tortor.&#8221;
-          &#8220;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis nibh turpis, accumsan eu, iaculis in, tincidunt id, tortor.&#8221;</p>
+        <blockquote>&#8220;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis nibh turpis, accumsan eu, iaculis in, tincidunt id, tortor.&#8221;
+          &#8220;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis nibh turpis, accumsan eu, iaculis in, tincidunt id, tortor.&#8221;</blockquote>
       </div>
     </div>
     <div id="new-brigades">
@@ -31,14 +31,7 @@
         <li><%= event.summary %></li>
       <% end %></ul>
     </div>
-  </div>
-  <div id="footer">
-    <p>A reasonable number of rights reserved</p>
-    <p>&copy; Copyright 2007</p>
-    <div id="paint-itred">
-      <a href="http://paint.itred.org/"></a>
-    </div>
-  </div>
+  <% end %>
 
 <% content_for :google_maps do %>
 <script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>

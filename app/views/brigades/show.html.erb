@@ -1,30 +1,32 @@
-<h1><%= @brigade.name %></h1>
-<div id="primary">  
-  <div id="map"><div id="map-inner"><div id="map_canvas"></div></div></div>
-</div>
+<% content_for :primary do %>
+  <div id="header2"><h1><%= @brigade.name %></h1></div>
+  <h3><%= @brigade.location %></h3>
 
-<h3><%= @brigade.location %></h3>
+  <p><label>Description:</label>
+    <%= @brigade.description %></p>
 
-<p><label>Description:</label>
-  <%= @brigade.description %></p>
+  <p><label>Membership:</label>
+    <%= @brigade.membership_size %></p>
 
-<p><label>Membership:</label>
-  <%= @brigade.membership_size %></p>
+  <p><label>Website:</label>
+    <%= @brigade.website_url %></p>
 
-<p><label>Website:</label>
-  <%= @brigade.website_url %></p>
+  <p><label>RSS:</label>
+    <%= @brigade.rss_feed.uri %></p>
 
-<p><label>RSS:</label>
-  <%= @brigade.rss_feed.uri %></p>
+  <p><label>iCal:</label>
+    <%= @brigade.calendar.uri %></p>
 
-<p><label>iCal:</label>
-  <%= @brigade.calendar.uri %></p>
+  <p><label>Established:</label>
+    <%= @brigade.established_on %></p>
 
-<p><label>Established:</label>
-  <%= @brigade.established_on %></p>
+  <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
+  <%= link_to 'Back', brigades_path %>
+<% end %>
 
-<%= link_to 'Edit', edit_brigade_path(@brigade) %> |
-<%= link_to 'Back', brigades_path %>
+<% content_for :secondary do %>
+  <div id="map" class="medium"><div id="map-inner" class="medium"><div id="map_canvas" class="medium"></div></div></div>
+<% end %>
 
 <% content_for :google_maps do %>
 

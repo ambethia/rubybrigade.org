@@ -9,7 +9,16 @@
 <body>
   <p style="color: green"><%= flash[:notice] %></p>
   <div id="content">
-    <%= yield  %>
+    <%= yield %>
+    <div id="primary"><%= yield :primary  %></div>
+    <div id="secondary"><%= yield :secondary  %></div>
+    <div id="footer">
+      <p>A reasonable number of rights reserved</p>
+      <p>&copy; Copyright 2007</p>
+      <div id="paint-itred">
+        <a href="http://paint.itred.org/"></a>
+      </div>
+    </div>
   </div>
 </body>
 <%= javascript_include_tag "prototype", "application" %>

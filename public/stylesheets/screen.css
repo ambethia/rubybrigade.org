@@ -64,17 +64,20 @@ body {
   width: 640px;
   float: left;
 }
-#search-box {
-  background: url(../images/search.png) no-repeat top right;
-  width:642px;
+#secondary {
+  width: 340px;
+  float: right;
+}
+#header2 {
+  background: url(../images/header2.png) no-repeat top right;
+  width:635px;
   height:68px;
 }
-
-#search-box label { display: none;}
-#search-box p {
+#header2 label { display: none;}
+#header2 p {
   text-align:right;
 }
-#search-box input  {
+#header2 input  {
   position:relative;
   bottom:23px;
   color:#4D4D4D;
@@ -87,42 +90,60 @@ body {
   background: #eee;
   font: bold 35px "Trebuchet MS1", Helvetica, sans-serif;
 }
-#search-box input.inactive {color:#999;}
-#search-box button {background:#666;border:0;position:relative;bottom:5px;}
+#header2 input.inactive {color:#999;}
+#header2 button {background:#666;border:0;position:relative;bottom:5px;}
+#header2 h1 {color:#F2F2F2;font: bold 2em "Trebuchet MS1", Helvetica, sans-serif;margin:20px;}
 
-#map {
+#map.large {
   height: 385px;
   width: 640px;
-  background: url(../images/map-top.png) no-repeat top right;
+  background: url(../images/map-top.png) no-repeat top center;
+}
+#map-inner.large {
+  height: 385px;
+  background: url(../images/map-bottom.png) no-repeat bottom right;
+  position: relative;
 }
 
-#map-inner {
-  height: 385px;
-  width: 640px;
+#map.medium {
+  width: 340px;
+  height: 255px;
+  background: url(../images/map-top.png) no-repeat top right;
+}
+#map-inner.medium {
+  width: 340px;
+  height: 255px;
   background: url(../images/map-bottom.png) no-repeat bottom right;
   position: relative;
 }
 
 #map_canvas {
-  width: 600px;
-  height: 350px;
+  background: #87A3C1;
   position: absolute;
   left: 50%;
   top: 50%;
+}
+#map_canvas.large {
+  width: 560px;
+  height: 310px;
   margin-top: -175px;
   margin-left: -300px;
-  border: 2px solid #666;
+  border: 20px solid #F2F2F2;
 }
 
-#secondary {
-  width: 340px;
-  float: right;
+#map_canvas.medium {
+  width: 300px;
+  height: 200px;
+  margin-top: -105px;
+  margin-left: -160px;
+  border: 10px solid #F2F2F2;
 }
+
 #quote {
   width: 342px;
   background: url(../images/quote-top.png) no-repeat top center
 }
-#quote p {
+#quote blockquote {
   font: bold .95em "Trebuchet MS1", Helvetica, sans-serif;
   padding: 20px 30px;
   background: url(../images/quote-bottom.png) no-repeat bottom center
