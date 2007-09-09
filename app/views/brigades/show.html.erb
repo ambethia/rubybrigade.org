@@ -1,4 +1,32 @@
 <h1><%= @brigade.name %></h1>
+<div id="primary">  
+  <div id="map"><div id="map-inner"><div id="map_canvas"></div></div></div>
+</div>
+
+<h3><%= @brigade.location %></h3>
+
+<p><label>Description:</label>
+  <%= @brigade.description %></p>
+
+<p><label>Membership:</label>
+  <%= @brigade.membership_size %></p>
+
+<p><label>Website:</label>
+  <%= @brigade.website_url %></p>
+
+<p><label>RSS:</label>
+  <%= @brigade.rss_feed.uri %></p>
+
+<p><label>iCal:</label>
+  <%= @brigade.calendar.uri %></p>
+
+<p><label>Established:</label>
+  <%= @brigade.established_on %></p>
+
+<%= link_to 'Edit', edit_brigade_path(@brigade) %> |
+<%= link_to 'Back', brigades_path %>
+
+<% content_for :google_maps do %>
 
 <script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>
 <script type="text/javascript">
@@ -36,28 +64,4 @@ function initialize() {
 Event.observe(window, 'load', initialize);
 Event.observe(window, 'unload', function() { GUnload(); });
 </script>
-
-<div id="map_canvas" style="width: 600px; height: 300px"></div>
-
-<h3><%= @brigade.location %></h3>
-
-<p><label>Description:</label>
-  <%= @brigade.description %></p>
-
-<p><label>Membership:</label>
-  <%= @brigade.membership_size %></p>
-
-<p><label>Website:</label>
-  <%= @brigade.website_url %></p>
-
-<p><label>RSS:</label>
-  <%= @brigade.rss_feed.uri %></p>
-
-<p><label>iCal:</label>
-  <%= @brigade.calendar.uri %></p>
-
-<p><label>Established:</label>
-  <%= @brigade.established_on %></p>
-
-<%= link_to 'Edit', edit_brigade_path(@brigade) %> |
-<%= link_to 'Back', brigades_path %>
+<% end %>
