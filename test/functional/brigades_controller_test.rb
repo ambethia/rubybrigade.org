@@ -42,7 +42,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
     assert_redirected_to "http://rubybrigade.org/brigades/#{brigades(:tampa).id}"
   end
 
-  def test_should_find_show_all_brigades_if_geocoding_subdomain_fails
+  def test_should_find_show_no_brigades_if_geocoding_subdomain_fails
     bad_location = "asdfasdfasdf"
     mock_geocode_failure bad_location
     
@@ -50,7 +50,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
     get :index
     assert_response :success
     brigades = assigns(:brigades)
-    assert_equal brigades.length, Brigade.count
+    assert_equal 0, brigades.length
   end
 
   def test_should_get_new

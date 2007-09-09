@@ -1,4 +1,6 @@
 class BrigadesController < ApplicationController
+  include GeoKit::Geocoders
+
   before_filter :disallow_subdomain, :except => [:index, :search]
   before_filter :ensure_domain,      :only   => [:index, :search]
   
@@ -113,23 +115,19 @@ class BrigadesController < ApplicationController
       search_to_geocode = params[:search].gsub(/\W/, ' ').gsub(/_/, ' ')
 
       # attempt to geocode and search. 
-      begin
-        @brigades = Brigade.find :all, 
-                                 :origin => search_to_geocode, 
-    	                           :within => 10
-
-  	  # if geocode fails, catch error and find all
-  	  rescue
-  	    @brigades = Brigade.find(:all)
-	    end
-  	
-    	# if only one result, redirect to it
-    	if @brigades.length == 1
+      location = GoogleGeocoder.geocode(search_to_geocode)
+      if location.success
+        @brigade = Brigade.find_nearest(:origin => location)
         respond_to do |format|
-          format.html { redirect_to(@brigades[0]) }
-          format.xml  { render :xml => @brigades[0] }
+          format.html { redirect_to @brigade }
+          format.xml  { render :xml => @brigade }
         end
-  	  else
+      else
+    	  # if geocode fails, find none
+  	    @brigades = []
+  	    flash[:notice] = "No brigrades found."
+  	    flash.discard
+
         respond_to do |format|
           format.html do 
             load_new_brigades_and_events
