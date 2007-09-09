@@ -23,7 +23,7 @@ class Brigade < ActiveRecord::Base
 
   class << self
     
-    def newest(limit = 9)
+    def newest(limit = 5)
       find :all, :order => "created_at DESC", :limit => limit
     end
     

@@ -1,8 +1,189 @@
-body {
-  text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
 }
-#container {
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+body {
+  background: #666;
+  width:100%;
+}
+#content {
+  background: #666 url(../images/header.png) no-repeat top left;
+  color: #4D4D4D;
+  width: 980px;
+  font: normal 90% "Trebuchet MS1", Helvetica, sans-serif;
+  padding:190px 0 0 5px;
+  margin:auto;
+}
+
+#content a {text-decoration:none;color:#990000;}
+
+#primary {
+  width: 640px;
+  float: left;
+}
+#search-box {
+  background: url(../images/search.png) no-repeat top right;
+  width:642px;
+  height:68px;
+}
+
+#search-box label { display: none;}
+#search-box p {
+  text-align:right;
+}
+#search-box input  {
+  position:relative;
+  bottom:23px;
+  color:#4D4D4D;
+  width: 255px;
+  height: 35px; 
+  margin: 8px 15px;
+  text-align:right;
+  padding: 0;
+  border: 4px solid #fff;
+  background: #eee;
+  font: bold 35px "Trebuchet MS1", Helvetica, sans-serif;
+}
+#search-box input.inactive {color:#999;}
+#search-box button {background:#666;border:0;position:relative;bottom:5px;}
+
+#map {
+  height: 385px;
+  width: 640px;
+  background: url(../images/map-top.png) no-repeat top right;
+}
+
+#map-inner {
+  height: 385px;
+  width: 640px;
+  background: url(../images/map-bottom.png) no-repeat bottom right;
+  position: relative;
+}
+
+#map_canvas {
   width: 600px;
-  margin: 0 auto;
-  text-align: left;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -175px;
+  margin-left: -300px;
+  border: 2px solid #666;
+}
+
+#secondary {
+  width: 340px;
+  float: right;
+}
+#quote {
+  width: 342px;
+  background: url(../images/quote-top.png) no-repeat top center
+}
+#quote p {
+  font: bold .95em "Trebuchet MS1", Helvetica, sans-serif;
+  padding: 20px 30px;
+  background: url(../images/quote-bottom.png) no-repeat bottom center
+}
+#new-brigades {
+  float: left;
+  width: 165px;
+  background: url(../images/new-brigades-top.png) no-repeat top center
+}
+#new-brigades a {color:#4D4D4D; text-indent: -5000px;}
+#new-brigades ul {
+  padding: 90px 25px 15px;
+  font-weight: bold;
+}
+#add-brigade {
+    width: 165px; height: 42px;
+    background: url(../images/add-brigade.png) no-repeat;
+    position: relative;
+}   
+#add-brigade a {
+    height: 42px; display: block;
+}   
+#new-brigades li {
+  padding: 8px 0;
+  background: url(../images/list-underline.png) no-repeat bottom center
+}
+#upcoming-events {
+  float: right;
+  width: 170px;
+  background: url(../images/upcoming-events-top.png) no-repeat top center
+}
+#upcoming-events ul {
+  padding: 130px 25px 20px;
+  font-weight: bold;
+  background: url(../images/upcoming-events-bottom.png) no-repeat bottom center
+}
+#upcoming-events li {
+  padding: 8px 0;
+  background: url(../images/list-underline.png) no-repeat bottom center
+}
+#footer {
+  padding: 15px 0;
+  width: 980px;
+  clear: both;
+}
+
+#footer p {
+  color: #F2F2F2;
+  text-align: right;
+  position:relative;
+  right: 345px;
+}
+
+#paint-itred {
+    width: 341px; height: 48px;
+    background: url(../images/paint-itred.png) no-repeat;
+    position: relative;
+    left:640px;
+    bottom:35px;
+}   
+#paint-itred a {
+    height: 48px;
+    display:block;
 }

@@ -1,3 +1,45 @@
+  <div id="primary">  
+    <div id="search-box">
+      <% form_tag({:action => 'search'}, :method => 'get') do %>
+        <p>
+          <label for="search" id="search-label">Location</label>
+          <%= text_field_tag 'search', params[:search] %>
+          <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
+        </p>
+      <% end %>
+    </div>
+    <div id="map"><div id="map-inner"><div id="map_canvas"></div></div></div>
+  </div>
+  <div id="secondary">
+    <div id="quote-wrapper">
+      <div id="quote">
+        <p>&#8220;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis nibh turpis, accumsan eu, iaculis in, tincidunt id, tortor.&#8221;</p>
+      </div>
+    </div>
+    <div id="new-brigades">
+      <ul><% for brigade in @newest_brigades %>
+        <li><%= link_to brigade.name, brigade %>
+        </li>
+      <% end %></ul>
+      <div id="add-brigade">
+        <%= link_to 'New brigade', new_brigade_path %>
+      </div>
+    </div>
+    <div id="upcoming-events">
+      <ul><% for event in @upcoming_events -%>
+        <li><%= event.summary %></li>
+      <% end %></ul>
+    </div>
+  </div>
+  <div id="footer">
+    <p>A reasonable number of rights reserved</p>
+    <p>&copy; Copyright 2007</p>
+    <div id="paint-itred">
+      <a href="http://paint.itred.org/"></a>
+    </div>
+  </div>
+
+<% content_for :google_maps do %>
 <script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>
 <script type="text/javascript">
 google.load("maps", "2");
@@ -33,28 +75,4 @@ function initialize() {
 Event.observe(window, 'load', initialize);
 Event.observe(window, 'unload', function() { GUnload(); });
 </script>
-
-<h1>Ruby Brigade!</h1>
-
-<% form_tag({:action => 'search'}, :method => 'get') do %>
-  <p>Where are you? <%= text_field_tag 'search', params[:search] %> <%= submit_tag 'Find a Brigade!' %></p>
 <% end %>
-
-<div id="map_canvas" style="width: 600px; height: 375px"></div>
-
-<h2>Upcoming Events</h2>
-<% for event in @upcoming_events %>
-  <p><strong><%= event.summary %></strong> - 
-  <%= event.starts_at.strftime("%m/%d/%y") %> - 
-  <%= event.location %></p>
-<% end %>
-
-<h2>Newest Brigades</h2>
-<% for brigade in @newest_brigades %>
-  <p><strong><%= link_to brigade.name, brigade %></strong> - 
-  <%= brigade.location %></p>
-<% end %>
-
-<br />
-
-<%= link_to 'New brigade', new_brigade_path %>
