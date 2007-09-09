@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 10) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "feed_id",      :null => false
+    t.integer  "feed_id",      :default => 0, :null => false
     t.string   "guid"
     t.datetime "published_at"
   end

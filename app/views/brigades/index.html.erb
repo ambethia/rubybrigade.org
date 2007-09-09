@@ -34,7 +34,7 @@ Event.observe(window, 'load', initialize);
 Event.observe(window, 'unload', function() { GUnload(); });
 </script>
 
-<h1>RubyBrigade</h1>
+<h1>Ruby Brigade!</h1>
 
 <% form_tag({:action => 'search'}, :method => 'get') do %>
   <p>Where are you? <%= text_field_tag 'search', params[:search] %> <%= submit_tag 'Find a Brigade!' %></p>
@@ -42,26 +42,18 @@ Event.observe(window, 'unload', function() { GUnload(); });
 
 <div id="map_canvas" style="width: 600px; height: 375px"></div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Size</th>
-    <th>Established</th>
-  </tr>
-  
-<% for brigade in @brigades %>
-  <tr>
-    <td><%=h brigade.name %></td>
-    <td><%=h brigade.location %></td>
-    <td><%=h brigade.membership_size %></td>
-    <td><%=h brigade.established_on %></td>
-    <td><%= link_to 'Show', brigade %></td>
-    <td><%= link_to 'Edit', edit_brigade_path(brigade) %></td>
-    <td><%= link_to 'Destroy', brigade, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<h2>Upcoming Events</h2>
+<% for event in @upcoming_events %>
+  <p><strong><%= event.summary %></strong> - 
+  <%= event.starts_at.strftime("%m/%d/%y") %> - 
+  <%= event.location %></p>
 <% end %>
-</table>
+
+<h2>Newest Brigades</h2>
+<% for brigade in @newest_brigades %>
+  <p><strong><%= link_to brigade.name, brigade %></strong> - 
+  <%= brigade.location %></p>
+<% end %>
 
 <br />
 

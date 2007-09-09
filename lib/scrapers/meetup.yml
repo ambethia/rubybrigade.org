@@ -1,7 +1,9 @@
---- 
+---
 - city: San Francisco
   name: The San Francisco Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/6/calendar/ical/
   subdomain: san_francisco
@@ -16,6 +18,8 @@
 - city: Redwood City
   name: Silicon Valley Ruby on Rails
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/72/calendar/ical/
   subdomain: redwood_city
@@ -30,6 +34,8 @@
 - city: Berkeley
   name: The East Bay Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/81/calendar/ical/
   subdomain: berkeley
@@ -44,6 +50,8 @@
 - city: Los Angeles
   name: LA Web Application Developers Meetup
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://web.meetup.com/34/calendar/ical/
   subdomain: los_angeles
@@ -58,6 +66,8 @@
 - city: New York
   name: NYC.rb - Ruby & Ruby on Rails Meetup
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/75/calendar/ical/
   subdomain: new_york
@@ -72,6 +82,8 @@
 - city: Raleigh
   name: The Raleigh-area Ruby Brigade (raleigh.rb)
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/3/calendar/ical/
   subdomain: raleigh
@@ -86,6 +98,8 @@
 - city: Delhi
   name: "New Delhi Open Source Meetup : LAMP, Ruby, Lazslo, AJAX"
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://php.meetup.com/330/calendar/ical/
   subdomain: delhi
@@ -100,6 +114,8 @@
 - city: Atlanta
   name: The Atlanta Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/83/calendar/ical/
   subdomain: atlanta
@@ -114,6 +130,8 @@
 - city: Palo Alto
   name: Palo Alto/Stanford Ruby BYOL Hack Session
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/82/calendar/ical/
   subdomain: palo_alto
@@ -128,6 +146,8 @@
 - city: Vancouver
   name: VanRuby - Vancouver Ruby Association
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/18/calendar/ical/
   subdomain: vancouver
@@ -142,6 +162,8 @@
 - city: San Jose
   name: South Bay Ruby on Rails
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/99/calendar/ical/
   subdomain: san_jose
@@ -156,6 +178,8 @@
 - city: Santa Monica
   name: The Los Angeles Ruby/Rails Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/84/calendar/ical/
   subdomain: santa_monica
@@ -170,6 +194,8 @@
 - city: Natick
   name: The Metrowest Ruby Users Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/87/calendar/ical/
   subdomain: natick
@@ -184,6 +210,8 @@
 - city: Brisbane
   name: The Brisbane Ruby Brigade
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/74/calendar/ical/
   subdomain: brisbane
@@ -198,6 +226,8 @@
 - city: Miami
   name: South Florida Ruby Brigade
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/71/calendar/ical/
   subdomain: miami
@@ -212,6 +242,8 @@
 - city: Forest Park
   name: Chicago Area Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/77/calendar/ical/
   subdomain: forest_park
@@ -226,6 +258,8 @@
 - city: Baltimore
   name: B'more on Rails
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/85/calendar/ical/
   subdomain: baltimore
@@ -240,6 +274,8 @@
 - city: Tampa
   name: The Tampa Ruby Brigade
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/73/calendar/ical/
   subdomain: tampa
@@ -254,6 +290,8 @@
 - city: Vancouver
   name: The Vancouver Ruby/Rails Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/112/calendar/ical/
   subdomain: vancouver
@@ -268,6 +306,8 @@
 - city: Bangalore
   name: The Bangalore LAMP Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://lampsoftware.meetup.com/5/calendar/ical/
   subdomain: bangalore
@@ -282,6 +322,8 @@
 - city: Santa Cruz
   name: Santa Cruz Ruby on Rails Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/86/calendar/ical/
   subdomain: santa_cruz
@@ -296,6 +338,8 @@
 - city: Indianapolis
   name: The Indianapolis Ruby & Rails Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/89/calendar/ical/
   subdomain: indianapolis
@@ -310,6 +354,8 @@
 - city: Charlotte
   name: Charlotte Ruby Enthusiasts
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/70/calendar/ical/
   subdomain: charlotte
@@ -324,6 +370,8 @@
 - city: Auckland
   name: "Ruby Nights: The Auckland Ruby Group"
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/96/calendar/ical/
   subdomain: auckland
@@ -338,6 +386,8 @@
 - city: San Jose
   name: The SJ Entrepreneur on Rails Meetup
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/100/calendar/ical/
   subdomain: san_jose
@@ -352,6 +402,8 @@
 - city: Ni Dilli
   name: The Ni Dilli Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/108/calendar/ical/
   subdomain: ni_dilli
@@ -366,6 +418,8 @@
 - city: Sebastopol
   name: North Bay Ruby Users Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/106/calendar/ical/
   subdomain: sebastopol
@@ -380,6 +434,8 @@
 - city: Grand Rapids
   name: The Michigan Ruby Users Group (Grand Rapids)
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/46/calendar/ical/
   subdomain: grand_rapids
@@ -394,6 +450,8 @@
 - city: Ashburn
   name: The Northern Virginia Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/93/calendar/ical/
   subdomain: ashburn
@@ -408,6 +466,8 @@
 - city: Portland
   name: The Portland Maine Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/66/calendar/ical/
   subdomain: portland
@@ -422,6 +482,8 @@
 - city: Manchester
   name: The Connecticut Ruby on Rails Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/92/calendar/ical/
   subdomain: manchester
@@ -436,6 +498,8 @@
 - city: Austin
   name: The Austin Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/97/calendar/ical/
   subdomain: austin
@@ -450,6 +514,8 @@
 - city: Cary
   name: erlounge RDU
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/109/calendar/ical/
   subdomain: cary
@@ -464,6 +530,8 @@
 - city: Kansas City
   name: The Kansas City Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/113/calendar/ical/
   subdomain: kansas_city
@@ -478,6 +546,8 @@
 - city: Nashville
   name: The Nashville Ruby on Rails / Agile Software Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/110/calendar/ical/
   subdomain: nashville
@@ -492,6 +562,8 @@
 - city: Seattle
   name: The Seattle Ruby Network
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/111/calendar/ical/
   subdomain: seattle
@@ -506,6 +578,8 @@
 - city: Mundelein
   name: Chicago Area Groovy Java VM Users
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://java.meetup.com/165/calendar/ical/
   subdomain: mundelein
@@ -520,6 +594,8 @@
 - city: Grapevine
   name: Grapevine Ruby and Rails
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/98/calendar/ical/
   subdomain: grapevine
@@ -534,6 +610,8 @@
 - city: Camp Hill
   name: Harrisburg Ruby Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/102/calendar/ical/
   subdomain: camp_hill
@@ -548,6 +626,8 @@
 - city: Arlington
   name: Arlington Rubyists and Ruby on Rails Developers
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/80/calendar/ical/
   subdomain: arlington
@@ -562,6 +642,8 @@
 - city: Blacksburg
   name: Blacksburg Ruby User Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/104/calendar/ical/
   subdomain: blacksburg
@@ -576,6 +658,8 @@
 - city: Brooklyn
   name: NYC Ruby on Rails at deepVertical
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/101/calendar/ical/
   subdomain: brooklyn
@@ -590,6 +674,8 @@
 - city: State College
   name: State College Ruby Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/107/calendar/ical/
   subdomain: state_college
@@ -604,6 +690,8 @@
 - city: Boca Raton
   name: The Boca Raton Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/116/calendar/ical/
   subdomain: boca_raton
@@ -618,6 +706,8 @@
 - city: Jupiter
   name: Florida Semantic Web (FSW) Meetup Group - South East Region
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://semweb.meetup.com/28/calendar/ical/
   subdomain: jupiter
@@ -632,6 +722,8 @@
 - city: Bergen
   name: Bergen Coding Dojo
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://softwaredev.meetup.com/78/calendar/ical/
   subdomain: bergen
@@ -646,6 +738,8 @@
 - city: Pleasant Valley
   name: Hudson Valley Ruby Brigade
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/114/calendar/ical/
   subdomain: pleasant_valley
@@ -660,6 +754,8 @@
 - city: Bangkok
   name: The Bangkok Ruby Meetup Group
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/103/calendar/ical/
   subdomain: bangkok
@@ -674,6 +770,8 @@
 - city: Perris
   name: Riverside Ruby Army
   feeds: 
+    rss:
+      uri:
     ics: 
       uri: http://ruby.meetup.com/115/calendar/ical/
   subdomain: perris

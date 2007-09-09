@@ -1,5 +1,6 @@
 class BrigadesController < ApplicationController
   before_filter :disallow_subdomain, :except => [:index, :search]
+  before_filter :ensure_domain,      :only   => [:index, :search]
   
   # GET /brigades
   # GET /brigades.xml
@@ -11,7 +12,7 @@ class BrigadesController < ApplicationController
       @brigades = Brigade.find(:all)
     
       respond_to do |format|
-        format.html # index.html.erb
+        format.html { load_new_brigades_and_events }
         format.xml  { render :xml => @brigades }
       end
     end
@@ -103,9 +104,17 @@ class BrigadesController < ApplicationController
     else
       # remove all non word characters or underscores
       search_to_geocode = params[:search].gsub(/\W/, ' ').gsub(/_/, ' ')
-      @brigades = Brigade.find :all, 
-                               :origin => search_to_geocode, 
-  	                           :within => 10
+
+      # attempt to geocode and search. 
+      begin
+        @brigades = Brigade.find :all, 
+                                 :origin => search_to_geocode, 
+    	                           :within => 10
+
+  	  # if geocode fails, catch error and find all
+  	  rescue
+  	    @brigades = Brigade.find(:all)
+	    end
   	
     	# if only one result, redirect to it
     	if @brigades.length == 1
@@ -115,7 +124,10 @@ class BrigadesController < ApplicationController
         end
   	  else
         respond_to do |format|
-          format.html { render :template => 'brigades/index'}
+          format.html do 
+            load_new_brigades_and_events
+            render :template => 'brigades/index'
+          end
           format.xml  { render :xml => @brigades }
         end
       end
@@ -123,4 +135,10 @@ class BrigadesController < ApplicationController
     
   end
   
+  private
+    def load_new_brigades_and_events
+      @upcoming_events = Event.upcoming
+      @newest_brigades = Brigade.newest
+    end
+    
 end
