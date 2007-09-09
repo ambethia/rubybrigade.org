@@ -92,7 +92,7 @@ body {
 }
 #header2 input.inactive {color:#999;}
 #header2 button {background:#666;border:0;position:relative;bottom:5px;}
-#header2 h1 {color:#F2F2F2;font: bold 2em "Trebuchet MS1", Helvetica, sans-serif;margin:20px;}
+#header2 h1 {color:#F2F2F2;font: bold 1.75em "Trebuchet MS1", Helvetica, sans-serif;padding:30px 10px;text-transform:uppercase;}
 
 #map.large {
   height: 385px;
