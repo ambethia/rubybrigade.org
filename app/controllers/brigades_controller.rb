@@ -128,18 +128,13 @@ class BrigadesController < ApplicationController
       @bounds   = GeoKit::Bounds.from_point_and_radius(@location, 300)
       if @location.success
         @brigades = Brigade.find :all, :bounds => @bounds, :limit => 5
-        # # if only one, redirect straight to it
-        # if @brigades.length == 1
-        #   
-        # else
-          respond_to do |format|
-            format.html do
-              load_new_brigades_and_events
-              render :action => 'index'
-            end
-            format.xml  { render :xml => @brigades }
+        respond_to do |format|
+          format.html do
+            load_new_brigades_and_events
+            render :action => 'index'
           end
-        # end
+          format.xml  { render :xml => @brigades }
+        end
       else
     	  # if geocode fails, find none
   	    @brigades = []
