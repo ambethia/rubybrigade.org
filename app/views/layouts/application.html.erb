@@ -9,6 +9,7 @@
 <body>
   <p style="color: green"><%= flash[:notice] %></p>
   <div id="content">
+    <div id="header"><h1><%= link_to "Ruby Brigade!", root_url %></h1></div>
     <%= yield %>
     <div id="primary"><%= yield :primary  %></div>
     <div id="secondary"><%= yield :secondary  %></div>
@@ -16,7 +17,7 @@
       <p>A reasonable number of rights reserved</p>
       <p>&copy; Copyright 2007</p>
       <div id="paint-itred">
-        <a href="http://paint.itred.org/"></a>
+        <a href="http://paint.itred.org/">Paint.itRed</a>
       </div>
     </div>
   </div>

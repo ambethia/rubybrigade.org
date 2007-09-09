@@ -50,13 +50,15 @@ body {
   width:100%;
 }
 #content {
-  background: #666 url(../images/header.png) no-repeat top left;
   color: #4D4D4D;
   width: 980px;
   font: normal 90% "Lucida Grande", sans-serif;
-  padding:190px 0 0 5px;
+  padding:20px 0 0 5px;
   margin:auto;
 }
+
+#header h1 {background: #666 url(../images/header.png) no-repeat top left;text-indent:-5000px;}
+#header a {height:188px;width:766px;display:block;}
 
 #content a {text-decoration:none;color:#990000;}
 
@@ -79,16 +81,16 @@ body {
 }
 #header2 input  {
   position:relative;
-  bottom:15px;
+  bottom:24px;
   color:#4D4D4D;
   width: 255px;
   height: 35px; 
-  margin: 8px 15px;
+  margin: 0 10px;
   text-align:right;
   padding: 0;
   border: 4px solid #fff;
   background: #eee;
-  font: bold 35px "Lucida Grande", sans-serif;
+  font: bold 30px "Lucida Grande", sans-serif;
 }
 #header2 input.inactive {color:#999;}
 #header2 button {background:#666;border:0;position:relative;bottom:5px;}
@@ -100,7 +102,7 @@ body {
 }
 #search-box {
   background: url(../images/header2.png) no-repeat top right;
-  width:340px;
+  width:338px;
   height:68px;
 }
 #search-box label { display: none;}
@@ -108,16 +110,16 @@ body {
 #search-box button {background:#666;border:0;position:relative;bottom:5px;}
 #search-box input  {
   position:relative;
-  bottom:15px;
+  bottom:24px;
   color:#4D4D4D;
-  width: 200px;
+  width: 197px;
   height: 35px; 
-  margin: 8px 15px;
+  margin: 0 15px;
   text-align:right;
   padding: 0;
   border: 4px solid #fff;
   background: #eee;
-  font: bold 35px "Lucida Grande", sans-serif;
+  font: bold 30px "Lucida Grande", sans-serif;
 }
 
 #map.large {
@@ -172,38 +174,56 @@ body {
 #quote blockquote {
   font: bold .95em "Lucida Grande", sans-serif;
   padding: 20px 30px;
-  background: url(../images/quote-bottom.png) no-repeat bottom center
+  background: url(../images/quote-bottom.png) no-repeat bottom center;
 }
-#basic-box {
-  float:left;
-  width: 390px;
-  padding: 8px 15px;
-  margin-top:3px;
+h2.upcoming-events {
+  background: url(../images/header-upcoming-events.png) no-repeat top left;
+  width:223px;
+  height:29px;
+  text-indent:-5000px;
+}
+h2.headlines {
+  background: url(../images/header-headlines.png) no-repeat top left;
+  width:121px;
+  height:33px;
+  text-indent:-5000px;
+}
+#basic-box-wrapper.large {
+  width: 610px;
+  padding: 15px 15px;
+  margin-top:2px;
   background: url(../images/basic-box-top.png) no-repeat top right
 }
-#basic-box p {
-  background-color: #fff;
-  padding: 10px 20px;
-  margin-bottom:5px;
+#basic-box.large {
+  margin: 0 10px;
+  padding: 8px 20px;
+  background: #F2F2F2;
 }
-#basic-box-wrapper {
-  background: url(../images/basic-box-bottom.png) no-repeat bottom right
+#basic-box-wrapper h2.large {color:#F2F2F2;font: bold 1.5em "Lucida Grande", sans-serif;padding-bottom:5px;}
+
+#basic-box-wrapper.medium {
+  width: 320px;
+  padding: 15px 10px;
+  margin-top:2px;
+  background: url(../images/basic-box-top.png) no-repeat top right
+}
+#basic-box.medium {
+  margin: 0 10px;
+  padding: 8px 20px;
+  background: #F2F2F2;
+}
+#basic-box-wrapper h2.medium {color:#F2F2F2;font: bold 1.5em "Lucida Grande", sans-serif;padding-bottom:5px;}
+#description {
+  float: left;
+  width:360px;
+  padding-right: 10px;
 }
 #details {
-  float:right;
-  width: 176px;
-  padding: 10px 12px;
-  margin-right:10px;
-  background: url(../images/basic-box-top.png) no-repeat top right
+  float: right;
+  width:170px;
+  padding-left: 10px;
 }
-#details ul {
-  background-color: #fff;
-  padding: 10px 20px;
-}
-#details-wrapper {
-  background: url(../images/basic-box-bottom.png) no-repeat bottom right
-}
-
+#basic-box br.large {clear:both;}
 #new-brigades {
   float: left;
   width: 165px;
@@ -259,6 +279,7 @@ body {
     position: relative;
     left:640px;
     bottom:35px;
+    text-indent:-5000px;
 }   
 #paint-itred a {
     height: 48px;

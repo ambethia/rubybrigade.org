@@ -1,34 +1,45 @@
 <% content_for :primary do %>
   <div id="header2"><h1><%= @brigade.name %></h1></div>
 
-  <div id="basic-box-wrapper"><div id="basic-box">
-    <p><label>Description:</label>
+  <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
+    <div id="description">
+     <p><label>Description:</label>
     <%= @brigade.description %></p>
+    </div>
+    <div id="details">
+      <ul>
+        <li><label>Location:</label>
+          <%= @brigade.location %></li>
+        <li><label>Membership:</label>
+          <%= @brigade.membership_size %></li>
+
+        <li><label>Website:</label>
+          <%= @brigade.website_url %></li>
+
+        <li><label>RSS:</label>
+          <%= @brigade.rss_feed.uri %></li>
+
+        <li><label>iCal:</label>
+          <%= @brigade.calendar.uri %></li>
+
+        <li><label>Established:</label>
+          <%= @brigade.established_on %></li>
+      </ul>
+    </div>
+    <br class="large" />
+  </div>
     <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
     <%= link_to 'Back', brigades_path %>
-  </div></div>
-  <div id="upcoming-show-wrapper"><div id="upcoming-show">
-    <h2>Upcoming Events</h2>
+  </div>
+  <div id="basic-box-wrapper" class="large">
+    <h2 class="upcoming-events">Upcoming Events</h2>
+    <div id="basic-box" class="large">
     <ul>
-  </div></div>
-  <div id="details-wrapper"><div id="details">
-    <ul>
-      <li><label>Location:</label>
-        <%= @brigade.location %></li>
-      <li><label>Membership:</label>
-        <%= @brigade.membership_size %></li>
-
-      <li><label>Website:</label>
-        <%= @brigade.website_url %></li>
-
-      <li><label>RSS:</label>
-        <%= @brigade.rss_feed.uri %></li>
-
-      <li><label>iCal:</label>
-        <%= @brigade.calendar.uri %></li>
-
-      <li><label>Established:</label>
-        <%= @brigade.established_on %></li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
     </ul>
   </div></div>
 
@@ -43,6 +54,17 @@
   </div>
   <div id="map-wrapper"><div id="map"><p></p></div></div>
   <div id="map" class="medium"><div id="map-inner" class="medium"><div id="map_canvas" class="medium"></div></div></div>
+  <div id="basic-box-wrapper" class="medium">
+    <h2 class="headlines">Headlines</h2>
+    <div id="basic-box" class="medium">
+    <ul>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+      <li>one upcoming event</li>
+    </ul>
+  </div></div>
 <% end %>
 
 <% content_for :google_maps do %>
