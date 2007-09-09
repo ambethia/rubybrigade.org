@@ -111,6 +111,7 @@ class BrigadesController < ApplicationController
       respond_to do |format|
         format.html do
           if subdomain_present?
+            params[:search] = nil
             render :action => 'show'
           else
             redirect_to brigade_url(@brigade)

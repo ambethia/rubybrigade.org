@@ -15,7 +15,7 @@ meetups.each do |meetup|
     "lng"             => meetup.at(".longitude").inner_text.to_f,
     "city"            => meetup.at(".locality").inner_text,
     "state_region"    => meetup.at(".region") ? meetup.at(".region").inner_text : nil,
-    "country"         => meetup.at(".country-name").inner_text,
+    "country"         => meetup.at(".country-name").inner_text.upcase,
     "subdomain"       => meetup.at(".locality").inner_text.downcase.gsub(/[^\w\.\-]/,'_'),
     "feeds"           => { "ics" => { "uri" => "#{meetup_uri}calendar/ical/" } }
   }
