@@ -18,6 +18,8 @@ class Brigade < ActiveRecord::Base
   attr_writer      :feeds
   after_create     :create_feeds
   after_save       :update_feeds
+  
+  validates_presence_of :name
 
   class << self
     
@@ -48,11 +50,6 @@ class Brigade < ActiveRecord::Base
   end
 
   def location
-    "#{city} #{state_region} #{country}"
-  end
-  
-  # used by 'acts_as_mappable' for geocoding
-  def address
-    "#{city} #{state_region} #{postal_code} #{country}"
+    [city, state_region, country].compact.join(' ')
   end
 end

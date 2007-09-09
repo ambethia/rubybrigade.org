@@ -6,6 +6,7 @@ class FeedItemTest < Test::Unit::TestCase
   def setup
     # Because we're loading files in the test, not a real HTTP response
     File.any_instance.stubs(:code).returns("200")
+    mock_geocode_success 'Tampa'
     @brigade = Brigade.create(
       :name => "Tampa.rb",
       :city => "Tampa",

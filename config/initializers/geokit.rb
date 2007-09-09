@@ -54,4 +54,4 @@ GeoKit::Geocoders::geocoder_ca = false
 # Be aware that there are Terms of Use restrictions on how you can use the 
 # various geocoders.  Make sure you read up on relevant Terms of Use for each
 # geocoder you are going to use.
-GeoKit::Geocoders::provider_order = [:google,:us]
+GeoKit::Geocoders::provider_order = [:google]

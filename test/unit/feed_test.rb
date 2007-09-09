@@ -9,12 +9,16 @@ class FeedTest < Test::Unit::TestCase
   end
   
   def test_should_create_with_newly_created_brigade
+    mock_geocode_success 'Tampa'
+
     assert_difference "Feed.count", 2 do
       Brigade.create :city => "Tampa", :name => "Tampa.rb"
     end
   end
   
   def test_should_update_with_updated_brigade
+    mock_geocode_success 'Tampa'
+
     brigade = Brigade.create :city => "Tampa",
                              :name => "Tampa.rb",
                              :feeds => {
