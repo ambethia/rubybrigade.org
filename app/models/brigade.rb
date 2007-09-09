@@ -39,8 +39,13 @@ class Brigade < ActiveRecord::Base
   end
   
   def update_feeds
-    rss_feed.update_attributes @feeds[:rss].symbolize_keys unless rss_feed.nil?
-    calendar.update_attributes @feeds[:ics].symbolize_keys unless calendar.nil?
+    rss_feed.update_attributes @feeds[:rss].symbolize_keys # unless rss_feed.nil?
+    calendar.update_attributes @feeds[:ics].symbolize_keys # unless calendar.nil?
+  end
+  
+  def sync_feeds
+    rss_feed.sync
+    calendar.sync
   end
   
   def after_initialize

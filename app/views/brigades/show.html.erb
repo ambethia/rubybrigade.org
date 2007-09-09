@@ -1,4 +1,4 @@
-<% content_for :primary do %>
+<%- content_for :primary do -%>
   <div id="header2"><h1><%= @brigade.name %></h1></div>
 
   <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
@@ -17,47 +17,43 @@
     </div>
     <br class="large" />
   </div>
-    <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
-    <%= link_to 'Back', brigades_path %>
+    <%= link_to 'Edit', edit_brigade_path(@brigade) %> |<%= link_to 'Back', root_path %>
   </div>
+  <%- unless @brigade.events.empty? -%>
   <div id="basic-box-wrapper" class="large">
     <h2 class="upcoming-events">Upcoming Events</h2>
     <div id="basic-box" class="large">
-    <ul>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-    </ul>
+    <table width="100%">
+      <%- for event in @brigade.events -%>
+      <tr><td><%= link_to event.summary, event.uri %></td><td><%= event.starts_at %></td></tr>
+      <%- end -%>
+    </table>
   </div></div>
-
-<% end %>
-<% content_for :secondary do %>
+  <%- end -%>
+<%- end -%>
+<%- content_for :secondary do -%>
   <div id="search-box">
-  <% form_tag({:action => 'search'}, :method => 'get') do %>
+    <% form_tag({:action => 'search'}, :method => 'get') do %>
       <label for="search" id="search-label">Location</label>
       <%= text_field_tag 'search', params[:search] %>
       <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
-  <% end %>
+    <% end %>
   </div>
-  <div id="map-wrapper"><div id="map"><p></p></div></div>
   <div id="map" class="medium"><div id="map-inner" class="medium"><div id="map_canvas" class="medium"></div></div></div>
+  <%- unless @brigade.headlines.empty? -%>
   <div id="basic-box-wrapper" class="medium">
     <h2 class="headlines">Headlines</h2>
     <div id="basic-box" class="medium">
     <ul>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
-      <li>one upcoming event</li>
+    <%- for headline in @brigade.headlines -%>
+      <li><%= link_to headline.summary, headline.uri %></li>
+    <%- end -%>
     </ul>
   </div></div>
-<% end %>
+  <%- end -%>
+<%- end -%>
 
-<% content_for :google_maps do %>
-
+<%- content_for :google_maps do -%>
 <script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>
 <script type="text/javascript">
 google.load("maps", "2");
@@ -94,4 +90,4 @@ function initialize() {
 Event.observe(window, 'load', initialize);
 Event.observe(window, 'unload', function() { GUnload(); });
 </script>
-<% end %>
+<%- end -%>

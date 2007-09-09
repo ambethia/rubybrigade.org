@@ -2,13 +2,16 @@ class Feed < ActiveRecord::Base
   belongs_to :brigade
   has_many   :feed_items
   
+  after_save :sync
+  
   USER_AGENT = "rubybrigade.org/0.1"
   
   attr_accessor :parsed
   
   def sync
     self.feed_items = transmogrify
-    self.update_attribute :last_checked_at, Time.now
+    last_checked_at = Time.now
+    update_without_callbacks
   end
   
   protected
