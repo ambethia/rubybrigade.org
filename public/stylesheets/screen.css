@@ -53,7 +53,7 @@ body {
   background: #666 url(../images/header.png) no-repeat top left;
   color: #4D4D4D;
   width: 980px;
-  font: normal 90% "Trebuchet MS1", Helvetica, sans-serif;
+  font: normal 90% "Lucida Grande", sans-serif;
   padding:190px 0 0 5px;
   margin:auto;
 }
@@ -79,7 +79,7 @@ body {
 }
 #header2 input  {
   position:relative;
-  bottom:23px;
+  bottom:15px;
   color:#4D4D4D;
   width: 255px;
   height: 35px; 
@@ -88,16 +88,42 @@ body {
   padding: 0;
   border: 4px solid #fff;
   background: #eee;
-  font: bold 35px "Trebuchet MS1", Helvetica, sans-serif;
+  font: bold 35px "Lucida Grande", sans-serif;
 }
 #header2 input.inactive {color:#999;}
 #header2 button {background:#666;border:0;position:relative;bottom:5px;}
-#header2 h1 {color:#F2F2F2;font: bold 1.75em "Trebuchet MS1", Helvetica, sans-serif;padding:30px 10px;text-transform:uppercase;}
+#header2 h1 {
+  color:#F2F2F2;
+  font: bold 1.5em "Lucida Grande", sans-serif;
+  padding:10px 15px;
+  text-transform:uppercase;
+}
+#search-box {
+  background: url(../images/header2.png) no-repeat top right;
+  width:340px;
+  height:68px;
+}
+#search-box label { display: none;}
+#search-box input.inactive {color:#999;}
+#search-box button {background:#666;border:0;position:relative;bottom:5px;}
+#search-box input  {
+  position:relative;
+  bottom:15px;
+  color:#4D4D4D;
+  width: 200px;
+  height: 35px; 
+  margin: 8px 15px;
+  text-align:right;
+  padding: 0;
+  border: 4px solid #fff;
+  background: #eee;
+  font: bold 35px "Lucida Grande", sans-serif;
+}
 
 #map.large {
   height: 385px;
   width: 640px;
-  background: url(../images/map-top.png) no-repeat top center;
+  background: url(../images/map-top.png) no-repeat top right;
 }
 #map-inner.large {
   height: 385px;
@@ -144,16 +170,46 @@ body {
   background: url(../images/quote-top.png) no-repeat top center
 }
 #quote blockquote {
-  font: bold .95em "Trebuchet MS1", Helvetica, sans-serif;
+  font: bold .95em "Lucida Grande", sans-serif;
   padding: 20px 30px;
   background: url(../images/quote-bottom.png) no-repeat bottom center
 }
+#basic-box {
+  float:left;
+  width: 390px;
+  padding: 8px 15px;
+  margin-top:3px;
+  background: url(../images/basic-box-top.png) no-repeat top right
+}
+#basic-box p {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-bottom:5px;
+}
+#basic-box-wrapper {
+  background: url(../images/basic-box-bottom.png) no-repeat bottom right
+}
+#details {
+  float:right;
+  width: 176px;
+  padding: 10px 12px;
+  margin-right:10px;
+  background: url(../images/basic-box-top.png) no-repeat top right
+}
+#details ul {
+  background-color: #fff;
+  padding: 10px 20px;
+}
+#details-wrapper {
+  background: url(../images/basic-box-bottom.png) no-repeat bottom right
+}
+
 #new-brigades {
   float: left;
   width: 165px;
   background: url(../images/new-brigades-top.png) no-repeat top center
 }
-#new-brigades a {color:#4D4D4D; text-indent: -5000px;}
+#new-brigades a {text-indent: -5000px;}
 #new-brigades ul {
   padding: 90px 25px 15px;
   font-weight: bold;

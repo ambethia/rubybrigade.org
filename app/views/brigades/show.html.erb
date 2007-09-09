@@ -1,30 +1,47 @@
 <% content_for :primary do %>
   <div id="header2"><h1><%= @brigade.name %></h1></div>
-  <h3><%= @brigade.location %></h3>
 
-  <p><label>Description:</label>
+  <div id="basic-box-wrapper"><div id="basic-box">
+    <p><label>Description:</label>
     <%= @brigade.description %></p>
+    <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
+    <%= link_to 'Back', brigades_path %>
+  </div></div>
+  <div id="upcoming-show-wrapper"><div id="upcoming-show">
+    <h2>Upcoming Events</h2>
+    <ul>
+  </div></div>
+  <div id="details-wrapper"><div id="details">
+    <ul>
+      <li><label>Location:</label>
+        <%= @brigade.location %></li>
+      <li><label>Membership:</label>
+        <%= @brigade.membership_size %></li>
 
-  <p><label>Membership:</label>
-    <%= @brigade.membership_size %></p>
+      <li><label>Website:</label>
+        <%= @brigade.website_url %></li>
 
-  <p><label>Website:</label>
-    <%= @brigade.website_url %></p>
+      <li><label>RSS:</label>
+        <%= @brigade.rss_feed.uri %></li>
 
-  <p><label>RSS:</label>
-    <%= @brigade.rss_feed.uri %></p>
+      <li><label>iCal:</label>
+        <%= @brigade.calendar.uri %></li>
 
-  <p><label>iCal:</label>
-    <%= @brigade.calendar.uri %></p>
+      <li><label>Established:</label>
+        <%= @brigade.established_on %></li>
+    </ul>
+  </div></div>
 
-  <p><label>Established:</label>
-    <%= @brigade.established_on %></p>
-
-  <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
-  <a href="<%= home_url %>">Back</a>
 <% end %>
-
 <% content_for :secondary do %>
+  <div id="search-box">
+  <% form_tag({:action => 'search'}, :method => 'get') do %>
+      <label for="search" id="search-label">Location</label>
+      <%= text_field_tag 'search', params[:search] %>
+      <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
+  <% end %>
+  </div>
+  <div id="map-wrapper"><div id="map"><p></p></div></div>
   <div id="map" class="medium"><div id="map-inner" class="medium"><div id="map_canvas" class="medium"></div></div></div>
 <% end %>
 
