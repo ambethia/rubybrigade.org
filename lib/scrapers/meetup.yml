@@ -1,13 +1,11 @@
----
+--- 
 - city: San Francisco
   name: The San Francisco Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/6/calendar/ical/
   subdomain: san_francisco
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/6/
   lng: -122.41
   established_on: 2003-10-28
@@ -18,12 +16,10 @@
 - city: Redwood City
   name: Silicon Valley Ruby on Rails
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/72/calendar/ical/
   subdomain: redwood_city
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/72/
   lng: -122.25
   established_on: 2006-05-11
@@ -34,12 +30,10 @@
 - city: Berkeley
   name: The East Bay Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/81/calendar/ical/
   subdomain: berkeley
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/81/
   lng: -122.26
   established_on: 2006-08-23
@@ -50,44 +44,38 @@
 - city: Los Angeles
   name: LA Web Application Developers Meetup
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://web.meetup.com/34/calendar/ical/
   subdomain: los_angeles
-  country: us
+  country: US
   website_url: http://web.meetup.com/34/
   lng: -118.29
   established_on: 2007-02-18
   description: "Meet with other Web Application Developers. Ruby on Rails, Symfony-project, jQuery, etc. "
   state_region: CA
   lat: 34.12
-  membership_size: 248
+  membership_size: 249
 - city: New York
   name: NYC.rb - Ruby & Ruby on Rails Meetup
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/75/calendar/ical/
   subdomain: new_york
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/75/
   lng: -74.0
   established_on: 2006-07-19
   description: Discuss all Ruby and Ruby on Rails related topics, meet other developers and other interesting folks. Presentations, workshops, hack-fests and more. Meet other developers, find out about interesting projects and opportunities for work and potential employment.
   state_region: NY
   lat: 40.72
-  membership_size: 238
+  membership_size: 239
 - city: Raleigh
   name: The Raleigh-area Ruby Brigade (raleigh.rb)
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/3/calendar/ical/
   subdomain: raleigh
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/3/
   lng: -78.63
   established_on: 2004-03-18
@@ -98,28 +86,24 @@
 - city: Delhi
   name: "New Delhi Open Source Meetup : LAMP, Ruby, Lazslo, AJAX"
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://php.meetup.com/330/calendar/ical/
   subdomain: delhi
-  country: in
+  country: IN
   website_url: http://php.meetup.com/330/
   lng: 77.21
   established_on: 2006-05-03
   description: Intention of this group is to provide platform to PHP community in Delhi to discuss/learn on new PHP initiatives.  We will be taking on latest from open source world like AJAX, Laszlo, Zend Framework, Lucene Search Engine & PHP 5.  Join us now!
   state_region: 
   lat: 28.67
-  membership_size: 216
+  membership_size: 217
 - city: Atlanta
   name: The Atlanta Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/83/calendar/ical/
   subdomain: atlanta
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/83/
   lng: -84.36
   established_on: 2006-09-12
@@ -130,12 +114,10 @@
 - city: Palo Alto
   name: Palo Alto/Stanford Ruby BYOL Hack Session
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/82/calendar/ical/
   subdomain: palo_alto
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/82/
   lng: -122.15
   established_on: 2006-09-12
@@ -146,12 +128,10 @@
 - city: Vancouver
   name: VanRuby - Vancouver Ruby Association
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/18/calendar/ical/
   subdomain: vancouver
-  country: ca
+  country: CA
   website_url: http://ruby.meetup.com/18/
   lng: -123.13
   established_on: 2004-06-18
@@ -162,12 +142,10 @@
 - city: San Jose
   name: South Bay Ruby on Rails
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/99/calendar/ical/
   subdomain: san_jose
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/99/
   lng: -121.9
   established_on: 2007-02-26
@@ -178,12 +156,10 @@
 - city: Santa Monica
   name: The Los Angeles Ruby/Rails Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/84/calendar/ical/
   subdomain: santa_monica
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/84/
   lng: -118.5
   established_on: 2006-09-30
@@ -194,12 +170,10 @@
 - city: Natick
   name: The Metrowest Ruby Users Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/87/calendar/ical/
   subdomain: natick
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/87/
   lng: -71.35
   established_on: 2006-12-26
@@ -210,12 +184,10 @@
 - city: Brisbane
   name: The Brisbane Ruby Brigade
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/74/calendar/ical/
   subdomain: brisbane
-  country: au
+  country: AU
   website_url: http://ruby.meetup.com/74/
   lng: 153.02
   established_on: 2006-07-10
@@ -226,12 +198,10 @@
 - city: Miami
   name: South Florida Ruby Brigade
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/71/calendar/ical/
   subdomain: miami
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/71/
   lng: -80.3
   established_on: 2006-05-07
@@ -242,12 +212,10 @@
 - city: Forest Park
   name: Chicago Area Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/77/calendar/ical/
   subdomain: forest_park
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/77/
   lng: -87.82
   established_on: 2006-07-21
@@ -258,12 +226,10 @@
 - city: Baltimore
   name: B'more on Rails
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/85/calendar/ical/
   subdomain: baltimore
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/85/
   lng: -76.61
   established_on: 2006-10-18
@@ -274,12 +240,10 @@
 - city: Tampa
   name: The Tampa Ruby Brigade
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/73/calendar/ical/
   subdomain: tampa
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/73/
   lng: -82.51
   established_on: 2006-07-02
@@ -290,12 +254,10 @@
 - city: Vancouver
   name: The Vancouver Ruby/Rails Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/112/calendar/ical/
   subdomain: vancouver
-  country: ca
+  country: CA
   website_url: http://ruby.meetup.com/112/
   lng: -123.12
   established_on: 2007-07-17
@@ -306,12 +268,10 @@
 - city: Bangalore
   name: The Bangalore LAMP Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://lampsoftware.meetup.com/5/calendar/ical/
   subdomain: bangalore
-  country: in
+  country: IN
   website_url: http://lampsoftware.meetup.com/5/
   lng: 77.56
   established_on: 2006-12-19
@@ -322,12 +282,10 @@
 - city: Santa Cruz
   name: Santa Cruz Ruby on Rails Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/86/calendar/ical/
   subdomain: santa_cruz
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/86/
   lng: -122.06
   established_on: 2006-11-06
@@ -338,12 +296,10 @@
 - city: Indianapolis
   name: The Indianapolis Ruby & Rails Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/89/calendar/ical/
   subdomain: indianapolis
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/89/
   lng: -86.11
   established_on: 2007-01-09
@@ -354,12 +310,10 @@
 - city: Charlotte
   name: Charlotte Ruby Enthusiasts
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/70/calendar/ical/
   subdomain: charlotte
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/70/
   lng: -80.76
   established_on: 2006-02-16
@@ -370,12 +324,10 @@
 - city: Auckland
   name: "Ruby Nights: The Auckland Ruby Group"
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/96/calendar/ical/
   subdomain: auckland
-  country: nz
+  country: NZ
   website_url: http://ruby.meetup.com/96/
   lng: 174.76
   established_on: 2007-02-19
@@ -386,12 +338,10 @@
 - city: San Jose
   name: The SJ Entrepreneur on Rails Meetup
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/100/calendar/ical/
   subdomain: san_jose
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/100/
   lng: -121.95
   established_on: 2007-03-22
@@ -399,15 +349,27 @@
   state_region: CA
   lat: 37.41
   membership_size: 41
+- city: Sebastopol
+  name: North Bay Ruby Users Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/106/calendar/ical/
+  subdomain: sebastopol
+  country: US
+  website_url: http://ruby.meetup.com/106/
+  lng: -122.85
+  established_on: 2007-06-05
+  description: Meet other local Ruby programmers. We meet on the Third Thursday of every month at the O'Reilly headquarters in Sebastopol and are open to anyone developing with, or interested in, Ruby and Ruby on Rails. Pizza is served.
+  state_region: CA
+  lat: 38.4
+  membership_size: 35
 - city: Ni Dilli
   name: The Ni Dilli Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/108/calendar/ical/
   subdomain: ni_dilli
-  country: in
+  country: IN
   website_url: http://ruby.meetup.com/108/
   lng: 77.22
   established_on: 2007-06-15
@@ -415,31 +377,13 @@
   state_region: 
   lat: 28.6
   membership_size: 35
-- city: Sebastopol
-  name: North Bay Ruby Users Group
-  feeds: 
-    rss:
-      uri:
-    ics: 
-      uri: http://ruby.meetup.com/106/calendar/ical/
-  subdomain: sebastopol
-  country: us
-  website_url: http://ruby.meetup.com/106/
-  lng: -122.85
-  established_on: 2007-06-05
-  description: Meet other local Ruby programmers. We meet on the Third Thursday of every month at the O'Reilly headquarters in Sebastopol and are open to anyone developing with, or interested in, Ruby and Ruby on Rails. Pizza is served.
-  state_region: CA
-  lat: 38.4
-  membership_size: 34
 - city: Grand Rapids
   name: The Michigan Ruby Users Group (Grand Rapids)
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/46/calendar/ical/
   subdomain: grand_rapids
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/46/
   lng: -85.66
   established_on: 2005-02-16
@@ -450,12 +394,10 @@
 - city: Ashburn
   name: The Northern Virginia Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/93/calendar/ical/
   subdomain: ashburn
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/93/
   lng: -77.49
   established_on: 2007-02-04
@@ -466,12 +408,10 @@
 - city: Portland
   name: The Portland Maine Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/66/calendar/ical/
   subdomain: portland
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/66/
   lng: -70.26
   established_on: 2005-11-03
@@ -482,12 +422,10 @@
 - city: Manchester
   name: The Connecticut Ruby on Rails Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/92/calendar/ical/
   subdomain: manchester
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/92/
   lng: -72.52
   established_on: 2007-01-18
@@ -498,12 +436,10 @@
 - city: Austin
   name: The Austin Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/97/calendar/ical/
   subdomain: austin
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/97/
   lng: -97.76
   established_on: 2007-02-20
@@ -514,12 +450,10 @@
 - city: Cary
   name: erlounge RDU
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/109/calendar/ical/
   subdomain: cary
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/109/
   lng: -78.8
   established_on: 2007-06-22
@@ -527,15 +461,27 @@
   state_region: NC
   lat: 35.81
   membership_size: 25
+- city: Nashville
+  name: The Nashville Ruby on Rails / Agile Software Meetup Group
+  feeds: 
+    ics: 
+      uri: http://ruby.meetup.com/110/calendar/ical/
+  subdomain: nashville
+  country: US
+  website_url: http://ruby.meetup.com/110/
+  lng: -86.96
+  established_on: 2007-06-23
+  description: "The Nashville Ruby on Rails / Agile Software Meetup Group exists to bring together software developers, web app developers, & ui designers in the Nashville, TN area.  "
+  state_region: TN
+  lat: 36.06
+  membership_size: 25
 - city: Kansas City
   name: The Kansas City Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/113/calendar/ical/
   subdomain: kansas_city
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/113/
   lng: -94.59
   established_on: 2007-07-18
@@ -543,31 +489,13 @@
   state_region: MO
   lat: 39.04
   membership_size: 24
-- city: Nashville
-  name: The Nashville Ruby on Rails / Agile Software Meetup Group
-  feeds: 
-    rss:
-      uri:
-    ics: 
-      uri: http://ruby.meetup.com/110/calendar/ical/
-  subdomain: nashville
-  country: us
-  website_url: http://ruby.meetup.com/110/
-  lng: -86.96
-  established_on: 2007-06-23
-  description: "The Nashville Ruby on Rails / Agile Software Meetup Group exists to bring together software developers, web app developers, & ui designers in the Nashville, TN area.  "
-  state_region: TN
-  lat: 36.06
-  membership_size: 24
 - city: Seattle
   name: The Seattle Ruby Network
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/111/calendar/ical/
   subdomain: seattle
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/111/
   lng: -122.3
   established_on: 2007-07-02
@@ -578,12 +506,10 @@
 - city: Mundelein
   name: Chicago Area Groovy Java VM Users
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://java.meetup.com/165/calendar/ical/
   subdomain: mundelein
-  country: us
+  country: US
   website_url: http://java.meetup.com/165/
   lng: -88.06
   established_on: 2007-05-30
@@ -594,28 +520,24 @@
 - city: Grapevine
   name: Grapevine Ruby and Rails
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/98/calendar/ical/
   subdomain: grapevine
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/98/
   lng: -97.1
   established_on: 2007-02-24
   description: "We're focused on Ruby and other dynamic object-oriented programming languages, on and off the 'rails'. "
   state_region: TX
   lat: 32.93
-  membership_size: 15
+  membership_size: 16
 - city: Camp Hill
   name: Harrisburg Ruby Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/102/calendar/ical/
   subdomain: camp_hill
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/102/
   lng: -76.93
   established_on: 2007-04-30
@@ -626,12 +548,10 @@
 - city: Arlington
   name: Arlington Rubyists and Ruby on Rails Developers
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/80/calendar/ical/
   subdomain: arlington
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/80/
   lng: -77.12
   established_on: 2006-08-09
@@ -642,12 +562,10 @@
 - city: Blacksburg
   name: Blacksburg Ruby User Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/104/calendar/ical/
   subdomain: blacksburg
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/104/
   lng: -80.41
   established_on: 2007-05-24
@@ -658,12 +576,10 @@
 - city: Brooklyn
   name: NYC Ruby on Rails at deepVertical
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/101/calendar/ical/
   subdomain: brooklyn
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/101/
   lng: -73.97
   established_on: 2007-04-17
@@ -674,12 +590,10 @@
 - city: State College
   name: State College Ruby Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/107/calendar/ical/
   subdomain: state_college
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/107/
   lng: -77.84
   established_on: 2007-06-15
@@ -690,12 +604,10 @@
 - city: Boca Raton
   name: The Boca Raton Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/116/calendar/ical/
   subdomain: boca_raton
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/116/
   lng: -80.1
   established_on: 2007-08-18
@@ -706,12 +618,10 @@
 - city: Jupiter
   name: Florida Semantic Web (FSW) Meetup Group - South East Region
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://semweb.meetup.com/28/calendar/ical/
   subdomain: jupiter
-  country: us
+  country: US
   website_url: http://semweb.meetup.com/28/
   lng: -80.12
   established_on: 2007-06-21
@@ -722,12 +632,10 @@
 - city: Bergen
   name: Bergen Coding Dojo
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://softwaredev.meetup.com/78/calendar/ical/
   subdomain: bergen
-  country: "no"
+  country: "NO"
   website_url: http://softwaredev.meetup.com/78/
   lng: 5.34
   established_on: 2007-08-23
@@ -738,12 +646,10 @@
 - city: Pleasant Valley
   name: Hudson Valley Ruby Brigade
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/114/calendar/ical/
   subdomain: pleasant_valley
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/114/
   lng: -73.82
   established_on: 2007-08-03
@@ -754,12 +660,10 @@
 - city: Bangkok
   name: The Bangkok Ruby Meetup Group
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/103/calendar/ical/
   subdomain: bangkok
-  country: th
+  country: TH
   website_url: http://ruby.meetup.com/103/
   lng: 100.5
   established_on: 2007-05-17
@@ -770,12 +674,10 @@
 - city: Perris
   name: Riverside Ruby Army
   feeds: 
-    rss:
-      uri:
     ics: 
       uri: http://ruby.meetup.com/115/calendar/ical/
   subdomain: perris
-  country: us
+  country: US
   website_url: http://ruby.meetup.com/115/
   lng: -117.34
   established_on: 2007-08-09
