@@ -83,11 +83,18 @@ class BrigadesController < ApplicationController
   # DELETE /brigades/1.xml
   def destroy
     @brigade = Brigade.find(params[:id])
-    @brigade.destroy
+    if request.delete?
+      if verify_recaptcha
+        @brigade.destroy
+        flash[:notice] = "Brigade was deleted"
 
-    respond_to do |format|
-      format.html { redirect_to(brigades_url) }
-      format.xml  { head :ok }
+        respond_to do |format|
+          format.html { redirect_to(brigades_url) }
+          format.xml  { head :ok }
+        end
+      else
+        flash[:notice] = "Recaptcha was incorrect"
+      end
     end
   end
   

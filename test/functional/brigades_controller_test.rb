@@ -120,4 +120,12 @@ class BrigadesControllerTest < Test::Unit::TestCase
     
     assert_redirected_to brigades_path
   end
+  
+  def test_should_not_destroy_brigade_when_verify_recaptcha_fails
+    @controller.expects(:verify_recaptcha).returns(false)
+    delete :destroy, :id => 1
+    assert_response :success
+    assert_equal "Recaptcha was incorrect", flash[:notice]
+  end
+  
 end

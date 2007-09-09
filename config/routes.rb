@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :brigades, :collection => { :search => :get }
+  map.resources :brigades, :collection => { :search => :get }, :member => { :destroy => [:get, :delete] }
+  map.brigade_destroy '/brigades/:id/destroy', :controller => 'brigades', :action => 'destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

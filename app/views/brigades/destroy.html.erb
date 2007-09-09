@@ -1,0 +1,9 @@
+<h1>Are you sure?</h1>
+<% form_tag({}, :method => 'delete') do %>
+  <p>Do you <strong>really</strong> want to delete <strong><%= @brigade.name %></strong>? As in it's completely defunct, no
+     one attends anymore, or something of that nature? If you're really sure, fill out the captcha below and proceed.</p>
+  
+  <p><%= recaptcha_tags %></p>
+  
+  <p><%= submit_tag 'Delete' %></p>
+<% end %>
