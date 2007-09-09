@@ -1,0 +1,8 @@
+development:
+  google: "ABQIAAAA7fSAkbqTsq9BH66GWwqzhhRTOXQju3nFqv9G_1izFivpTt2gBRTxiouJl4tMEqX67JJim8nI3BNqyQ"
+
+test:
+  google: "Google"
+
+production:
+  google: "ABQIAAAA7fSAkbqTsq9BH66GWwqzhhRdp0GIEYI5kvcHEWY0DbO9EmtjShSMXPerMizJIlqVc1x00JYRXmpOpg"

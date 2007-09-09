@@ -25,13 +25,8 @@ GeoKit::Geocoders::yahoo = 'REPLACE_WITH_YOUR_YAHOO_KEY'
 # See http://www.google.com/apis/maps/signup.html
 # and http://www.google.com/apis/maps/documentation/#Geocoding_Examples
 
-if RAILS_ENV == 'production'
-  # Live Site
-  GeoKit::Geocoders::google = 'ABQIAAAA7fSAkbqTsq9BH66GWwqzhhRdp0GIEYI5kvcHEWY0DbO9EmtjShSMXPerMizJIlqVc1x00JYRXmpOpg'
-else
-  # Dev Site (port 3000)
-  GeoKit::Geocoders::google = 'ABQIAAAA7fSAkbqTsq9BH66GWwqzhhRTOXQju3nFqv9G_1izFivpTt2gBRTxiouJl4tMEqX67JJim8nI3BNqyQ'
-end
+geocoder_api_keys = YAML.load(File.open("#{RAILS_ROOT}/config/geocoder_api_keys.yml"))
+GeoKit::Geocoders::google = geocoder_api_keys[RAILS_ENV]['google']
     
 # This is your username and password for geocoder.us.
 # To use the free service, the value can be set to nil or false.  For 

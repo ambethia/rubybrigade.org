@@ -35,4 +35,16 @@ class FeedTest < Test::Unit::TestCase
     assert_equal "http://tamparuby.com/events.ics", brigade.calendar.uri
   end
   
+  def test_should_raise_an_error_when_calling_parse_on_feed_parent_class
+    assert_raise RuntimeError do
+      Feed.new.send 'parse'
+    end
+  end
+  
+  def test_should_raise_an_error_when_calling_transmogrify_on_feed_parent_class
+    assert_raise RuntimeError do
+      Feed.new.send 'transmogrify'
+    end
+  end
+  
 end
