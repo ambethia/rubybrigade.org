@@ -1,30 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <title>We're sorry, but something went wrong</title>
-	<style type="text/css">
-		body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-		div.dialog {
-			width: 25em;
-			padding: 0 4em;
-			margin: 4em auto 0 auto;
-			border: 1px solid #ccc;
-			border-right-color: #999;
-			border-bottom-color: #999;
-		}
-		h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-	</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="/stylesheets/screen.css?1189364833" media="screen" rel="Stylesheet" type="text/css" />
+  <title>Ruby Brigade</title>
 </head>
-
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+  <p style="color: green"></p>
+  <div id="content">
+
+    <div id="primary">
+    <div id="header2">
+      <form action="/brigades/search" method="get">
+        <p>
+          <label for="search" id="search-label">Location</label>
+          <input id="search" name="search" type="text" />
+          <button type="submit"><img alt="Search-icon" height="70" src="/images/search-icon.png?1189336929" width="82" /></button>
+        </p>
+      </form>
+    </div>
+    <div id="map" class="large"><div id="map-inner" class="large"><div id="map_canvas" class="large"></div></div></div>
+    </div>
+    <div id="secondary">
+      <div id="error" class="404">
+        <h1>Oh No!</h1>
+        
+        <p><span>500 Error</span>: Something went wrong.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>A reasonable number of rights reserved</p>
+      <p>&copy; Copyright 2007</p>
+      <div id="paint-itred">
+        <a href="http://paint.itred.org/"></a>
+      </div>
+    </div>
   </div>
 </body>
+<script src="/javascripts/prototype.js?1189227083" type="text/javascript"></script>
+<script src="/javascripts/application.js?1189341633" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAA7fSAkbqTsq9BH66GWwqzhhRTOXQju3nFqv9G_1izFivpTt2gBRTxiouJl4tMEqX67JJim8nI3BNqyQ"></script>
+<script type="text/javascript">
+google.load("maps", "2");
+
+function createMarker(map, point, brigade) {
+  var marker = new GMarker(point);
+  GEvent.addListener(marker, "click", function() {
+    marker.openInfoWindowHtml("<a href=\"/brigades/" + brigade.id + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
+      {maxWidth: 230});
+  });
+  return marker;
+}
+
+function initialize() {
+  if (GBrowserIsCompatible()) {
+    map = new GMap2(document.getElementById("map_canvas"));
+    map.setCenter(new GLatLng(38.25, -99.53), 3);
+    
+    map.addControl(new GMapTypeControl());
+    map.addControl(new GLargeMapControl());
+    
+    var brigades = []
+    
+    for(var i = 0; i < brigades.length; i++) {
+      var brigade = brigades[i];
+      var point = new GLatLng(brigade.lat, brigade.lng);
+      map.addOverlay(createMarker(map, point, brigade));
+    }
+    
+  }
+}
+
+Event.observe(window, 'load', initialize);
+Event.observe(window, 'unload', function() { GUnload(); });
+</script>
 </html>
