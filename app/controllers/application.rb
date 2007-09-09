@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
   
   def ensure_domain
-    unless request.domain == "rubybrigade.org"
+    unless %w(rubybrigade.org localhost).include?(request.domain)
       url  = "http://rubybrigade.org"
       url += ":#{request.port}" unless request.port == 80 # include the port unless it's 80, so it works in development mode :)
       url += request.request_uri
