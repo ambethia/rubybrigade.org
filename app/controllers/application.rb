@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
 
   helper :all # include all helpers, all the time
   
+  def subdomain_present?
+    request.subdomains.length > 0
+  end
+  
   def disallow_subdomain
-    if request.domain == "rubybrigade.org" && request.subdomains.length > 0
+    if request.domain == "rubybrigade.org" && subdomain_present?
       url  = "http://rubybrigade.org"
       url += ":#{request.port}" unless request.port == 80 # include the port unless it's 80, so it works in development mode :)
       url += request.request_uri

@@ -5,6 +5,7 @@ require 'brigades_controller'
 class BrigadesController; def rescue_action(e) raise e end; end
 
 class BrigadesControllerTest < Test::Unit::TestCase
+  include BrigadesHelper
   fixtures :brigades
 
   def setup
@@ -26,11 +27,12 @@ class BrigadesControllerTest < Test::Unit::TestCase
     assert_redirected_to "http://rubybrigade.org/"
   end
   
-  def test_should_find_brigade_by_subdomain_slug_and_redirect_to_show
+  def test_should_find_brigade_by_subdomain_slug_and_render_show
     @request.host = "tampa.rubybrigade.org"
     get :index
-    assert_response :redirect
-    assert_redirected_to "http://rubybrigade.org/brigades/#{brigades(:tampa).id}"
+    assert_response :success
+    assert_template 'show'
+    #assert_redirected_to "http://rubybrigade.org/brigades/#{brigades(:tampa).id}"
   end
 
   def test_should_find_brigade_by_geocoding_subdomain_and_redirect_to_show
@@ -38,8 +40,9 @@ class BrigadesControllerTest < Test::Unit::TestCase
     
     @request.host = "33604.rubybrigade.org"
     get :index
-    assert_response :redirect
-    assert_redirected_to "http://rubybrigade.org/brigades/#{brigades(:tampa).id}"
+    assert_response :success
+    assert assigns(:brigades)
+    #assert_redirected_to "http://rubybrigade.org/brigades/#{brigades(:tampa).id}"
   end
 
   def test_should_find_show_no_brigades_if_geocoding_subdomain_fails
@@ -51,6 +54,12 @@ class BrigadesControllerTest < Test::Unit::TestCase
     assert_response :success
     brigades = assigns(:brigades)
     assert_equal 0, brigades.length
+  end
+  
+  def test_should_redirect_to_subdomain_url_when_using_search_form
+    get :search, {:search => "tampa"}
+    assert_response :redirect
+    assert_redirected_to "http://tampa.rubybrigade.org"
   end
 
   def test_should_get_new
@@ -100,7 +109,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
   
   def test_should_update_brigade
     put :update, :id => 1, :brigade => { }
-    assert_redirected_to brigade_path(assigns(:brigade))
+    assert_redirected_to brigade_url(assigns(:brigade))
   end
   
   def test_should_not_update_brigade_when_name_is_blank
@@ -127,5 +136,17 @@ class BrigadesControllerTest < Test::Unit::TestCase
     assert_response :success
     assert_equal "Recaptcha was incorrect", flash[:notice]
   end
+  
+  def test_should_generate_url_for_brigade_with_subdomain
+    mock_geocode_success 'Tampa'
+    @brigade_with_subdomain = Brigade.create :name => "stuff", :subdomain => "stuff", :city => "Tampa"
+    assert_equal "http://stuff.rubybrigade.org", brigade_url(@brigade_with_subdomain)
+  end
+  
+  protected
+  def request
+    @request
+  end
+  
   
 end

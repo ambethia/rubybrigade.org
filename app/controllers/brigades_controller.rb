@@ -1,5 +1,6 @@
 class BrigadesController < ApplicationController
   include GeoKit::Geocoders
+  include BrigadesHelper
 
   before_filter :disallow_subdomain, :except => [:index, :search]
   before_filter :ensure_domain,      :only   => [:index, :search]
@@ -16,6 +17,7 @@ class BrigadesController < ApplicationController
       respond_to do |format|
         format.html { load_new_brigades_and_events }
         format.xml  { render :xml => @brigades }
+        format.json { render :text => points_for_mapping(@brigades) }
       end
     end
   end
@@ -100,12 +102,19 @@ class BrigadesController < ApplicationController
     end
   end
   
+  # yep, this method is hairy, but it works. could use some love though.
   def search
     # first search by subdomain slug field
     @brigade = Brigade.find_by_subdomain(params[:search])
     if @brigade
       respond_to do |format|
-        format.html { redirect_to(@brigade) }
+        format.html do
+          if subdomain_present?
+            render :action => 'show'
+          else
+            redirect_to brigade_url(@brigade)
+          end
+        end
         format.xml  { render :xml => @brigade }
       end
     
@@ -115,13 +124,22 @@ class BrigadesController < ApplicationController
       search_to_geocode = params[:search].gsub(/\W/, ' ').gsub(/_/, ' ')
 
       # attempt to geocode and search. 
-      location = GoogleGeocoder.geocode(search_to_geocode)
-      if location.success
-        @brigade = Brigade.find_nearest(:origin => location)
-        respond_to do |format|
-          format.html { redirect_to @brigade }
-          format.xml  { render :xml => @brigade }
-        end
+      @location = GoogleGeocoder.geocode(search_to_geocode)
+      @bounds   = GeoKit::Bounds.from_point_and_radius(@location, 300)
+      if @location.success
+        @brigades = Brigade.find :all, :bounds => @bounds, :limit => 5
+        # # if only one, redirect straight to it
+        # if @brigades.length == 1
+        #   
+        # else
+          respond_to do |format|
+            format.html do
+              load_new_brigades_and_events
+              render :action => 'index'
+            end
+            format.xml  { render :xml => @brigades }
+          end
+        # end
       else
     	  # if geocode fails, find none
   	    @brigades = []

@@ -21,7 +21,7 @@
     <%= @brigade.established_on %></p>
 
   <%= link_to 'Edit', edit_brigade_path(@brigade) %> |
-  <%= link_to 'Back', brigades_path %>
+  <a href="<%= home_url %>">Back</a>
 <% end %>
 
 <% content_for :secondary do %>

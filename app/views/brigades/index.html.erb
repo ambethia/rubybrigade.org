@@ -19,7 +19,7 @@
     </div>
     <div id="new-brigades">
       <ul><% for brigade in @newest_brigades %>
-        <li><%= link_to brigade.name, brigade %>
+        <li><%= link_to brigade.name, brigade_url(brigade) %>
         </li>
       <% end %></ul>
       <div id="add-brigade">
@@ -28,7 +28,7 @@
     </div>
     <div id="upcoming-events">
       <ul><% for event in @upcoming_events -%>
-        <li><%= event.summary %></li>
+        <li><%= event.uri.blank?? event.summary : link_to(event.summary, event.uri, {:target => "_blank"}) %></li>
       <% end %></ul>
     </div>
   <% end %>
@@ -41,7 +41,7 @@ google.load("maps", "2");
 function createMarker(map, point, brigade) {
   var marker = new GMarker(point);
   GEvent.addListener(marker, "click", function() {
-    marker.openInfoWindowHtml("<a href=\"/brigades/" + brigade.id + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
+    marker.openInfoWindowHtml("<a href=\"" + brigade.url + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
       {maxWidth: 230});
   });
   return marker;
@@ -50,8 +50,12 @@ function createMarker(map, point, brigade) {
 function initialize() {
   if (GBrowserIsCompatible()) {
     map = new GMap2(document.getElementById("map_canvas"));
-    map.setCenter(new GLatLng(38.25, -99.53), 3);
-    
+    <%- if @location -%>
+    map.setCenter(new GLatLng(<%= "#{@location.lat},#{@location.lng}" %>), 6);
+    <%- else -%>
+    map.setCenter(new GLatLng(0,0), 1);
+    <%- end -%>
+
     map.addControl(new GMapTypeControl());
     map.addControl(new GLargeMapControl());
     
