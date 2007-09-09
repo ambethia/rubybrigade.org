@@ -8,6 +8,7 @@ class Feed < ActiveRecord::Base
   
   def sync
     self.feed_items = transmogrify
+    self.update_attribute :last_checked_at, Time.now
   end
   
   protected
@@ -22,9 +23,13 @@ class Feed < ActiveRecord::Base
     
     # Fetch the content of the feeds URI
     def fetch
-      uri  = URI.parse(self["uri"])
-      http = Net::HTTP.new(uri.host,uri.port)
-      http.get(uri.path, 'User-Agent' => USER_AGENT)
+      unless self["uri"].blank?
+        uri = URI.parse(self["uri"])
+        http = Net::HTTP.new uri.host, uri.port
+        response = http.get uri.path, 'User-Agent' => USER_AGENT
+        response.code == "200" ? response.body : ""
+      else ""
+      end
     end
   
 end
