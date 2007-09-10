@@ -1,10 +1,71 @@
 <div id="forms">
   <%= error_messages_for :brigade %>
 <% form_for(@brigade) do |f| %>
-  <% content_for :show_and_delete do %>
-    <%= link_to 'Cancel', ROOT_URL %>
-  <% end %>
 
-  <%= render :partial => 'form', :locals => {:f => f} %>
+  <% content_for :primary do %>
+  <div id="header2">
+    <h1><%=h @title %></h1>
+  </div>
+  <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
+    <div id="forms">
+    <fieldset>
+      <h3>Basics</h3>
+      <dl>
+        <dt>Name</dt>
+        <dd><%= f.text_field 'name' %></dd>
+        <dt>Description</dt>
+        <dd><%= f.text_area 'description', :rows => 10 %></dd>
+        <dt>Subdomain</dt>
+        <dd><%= f.text_field 'subdomain' %></dd>
+        <dt>Membership Size:</dt>
+        <dd><%= f.text_field 'membership_size' %></dd>
+        <dt>Website URL</dt>
+        <dd><%= f.text_field 'website_url' %></dd>
+        <dt>RSS URL</dt>
+        <dd><%= text_field_tag "brigade[feeds][rss][uri]", @brigade.rss_feed.uri %></dd>
+        <dt>iCal URL</dt>
+        <dt><%= text_field_tag "brigade[feeds][ics][uri]", @brigade.calendar.uri %></p></dt>
+        <dt>Established</dt>
+        <dd><%= f.date_select 'established_on' %></dd>
+      </dl>
+    </fieldset>
+    </div>
+    <div id="recaptcha"><%= recaptcha_tags %></div>
+    <p>
+      <%= f.submit "Save" %>
+    </p>
+
+  </div></div>
+  <% end %>
+  <% content_for :secondary do %>
+  <div id="search-box">
+  <% form_tag({:action => 'search'}, :method => 'get') do %>
+      <label for="search" id="search-label">Location</label>
+      <%= text_field_tag 'search', params[:search] %>
+      <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
+  <% end %>
+  </div>
+  <div id="basic-box-wrapper" class="medium"><div id="basic-box" class="medium">
+    <div id="forms">
+      <fieldset>
+        <h3>Location</h3>
+      <dl>
+        <dt>City</dt>
+        <dd><%= f.text_field 'city' %></dd>
+
+        <dt>State or Region</dt>
+        <dd><%= f.text_field 'state_region' %></dd>
+
+        <dt>Country</dt>
+        <dd><%= f.select 'country', @countries, :include_blank => true %></dd>
+
+        <dt>Postal (ZIP) Code</dt>
+        <dd><%= f.text_field 'postal_code' %></dd>
+      </dl>
+      </fieldset>
+    </div>
+  </div></div>
+  <% end %>
+  
 <% end %>
 </div>

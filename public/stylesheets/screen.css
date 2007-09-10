@@ -70,6 +70,9 @@ body {
   width: 340px;
   float: right;
 }
+.edit {float:right;padding:8px 8px 0;}
+#links {float: left;}
+#links li {display:inline;padding:8px 5px 0;}
 #header2 {
   background: url(../images/header2.png) no-repeat top right;
   width:635px;
@@ -240,7 +243,7 @@ h2.headlines {
   padding-left: 10px;
   font: bold .9em "Lucida Grande", sans-serif;
 }
-#basic-box br.large {clear:both;}
+br.clear {clear:both;}
 #new-brigades {
   float: left;
   width: 165px;

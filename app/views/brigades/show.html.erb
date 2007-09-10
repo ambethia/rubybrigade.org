@@ -12,19 +12,23 @@
           <%- unless @brigade.membership_size.blank? -%><li><%= @brigade.membership_size %> Members Strong</li><%- end -%>
           <%- unless @brigade.established_on.nil? -%><li>Est. <%= @brigade.established_on.strftime("%B %Y") %></li><%- end -%>
           <%- unless @brigade.rss_feed.uri.blank? && @brigade.calendar.uri.blank? && @brigade.website_url.blank? -%>
-          <li>
-            <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>">Website</a></li><%- end -%>
-            
-            <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>">RSS</a><%- end -%>
-            
-            <%- unless @brigade.calendar.uri.blank? -%><a href="<%= @brigade.calendar.uri %>">iCal</a><%- end -%>
-          </li>
+
           <%- end -%>
         </ul>
       </div>
-      <br class="large" />
+      <br class="clear" />
     </div>
-    <div class="error"><p><%= link_to 'Edit this groups information', edit_brigade_path(@brigade) %></p></div>
+    <div class="edit"><p><%= link_to image_tag("button-edit.png", :size => "54x24"), edit_brigade_path(@brigade) %></p></div>
+    <div id="links">
+      <ul>
+         <li>
+            <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>"><%= image_tag "button-website.png", :size => "83x24" %></a></li><%- end -%>
+            <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>"><%= image_tag "button-feed.png", :size => "37x37" %></a><%- end -%>
+            <%- unless @brigade.calendar.uri.blank? -%><a href="<%= @brigade.calendar.uri %>"><%= image_tag "button-ical.png", :size => "19x24" %></a><%- end -%>
+          </li>
+      </ul>
+    </div>
+    <br class="clear" />
   </div>
   <%- unless @brigade.events.empty? -%>
   <div id="basic-box-wrapper" class="large">
