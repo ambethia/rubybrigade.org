@@ -2,7 +2,7 @@
 <div id="forms">
 <% form_for(@brigade) do |f| %>
   <% content_for :show_and_delete do %>
-    <%= link_to 'Show', @brigade %> or
+    <%= link_to 'Cancel Changes', @brigade %> or
     <%= link_to 'Delete', brigade_destroy_path(@brigade) %>
   <% end %>
   <%= render :partial => 'form', :locals => {:f => f} %>

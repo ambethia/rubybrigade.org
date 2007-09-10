@@ -4,12 +4,15 @@
 var LabelInInput = Class.create();
 LabelInInput.prototype = {
   initialize: function() {
-    this.element = $("search-label");
-    this.formElement = $("search");
-    this.formElement.observe('focus', this.removeLabel.bindAsEventListener(this));
-    this.formElement.observe('blur', this.addLabel.bindAsEventListener(this));
-    this.element.up('form').observe('submit', this.removeLabel.bindAsEventListener(this));
-    this.addLabel();
+    if ($("search-label")) {
+      this.element = $("search-label");
+      this.formElement = $("search");
+      this.formElement.observe('focus', this.removeLabel.bindAsEventListener(this));
+      this.formElement.observe('blur', this.addLabel.bindAsEventListener(this));
+      this.element.up('form').observe('submit', this.removeLabel.bindAsEventListener(this));
+      this.addLabel();
+      
+    };
   },
   addLabel: function(e) {
     if(this.formElement.value == "" || this.formElement.value == this.element.innerHTML) {
