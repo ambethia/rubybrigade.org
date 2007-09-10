@@ -8,7 +8,7 @@ LabelInInput.prototype = {
     this.formElement = $("search");
     this.formElement.observe('focus', this.removeLabel.bindAsEventListener(this));
     this.formElement.observe('blur', this.addLabel.bindAsEventListener(this));
-    this.element.form.observe('submit', this.removeLabel.bindAsEventListener(this));
+    this.element.up('form').observe('submit', this.removeLabel.bindAsEventListener(this));
     this.addLabel();
   },
   addLabel: function(e) {
