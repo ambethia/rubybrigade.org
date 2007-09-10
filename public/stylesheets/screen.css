@@ -307,6 +307,7 @@ h2.headlines {
 #recaptcha {border: 10px solid #fff;width:320px;margin:20px 0;}
 #delete h1 {color:#990000; font: bold 3em "Lucida Grande", sans-serif;text-transform:uppercase;}
 #delete p {font: normal .9em "Lucida Grande", sans-serif;padding-top:10px;}
+#error {background: url(../images/error.png) no-repeat bottom center;height: 254px;}
 #error h1 {font: bold 3em "Lucida Grande", sans-serif;text-transform:uppercase;}
 #error p {font: bold 1.25em "Lucida Grande", sans-serif;}
 #footer {
