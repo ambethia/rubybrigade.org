@@ -411,3 +411,7 @@ dd.established
 div.location {
   margin-top: 75px !important;
 }
+
+div.location select {
+  width: 260px;
+}
