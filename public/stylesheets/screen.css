@@ -71,8 +71,8 @@ body {
   float: right;
 }
 .edit {float:right;padding:8px 8px 0;}
-#links {float: left;}
-#links li {display:inline;padding:8px 5px 0;}
+#links {float: left;padding:8px 0 0;}
+#links li {display:inline;padding-right:8px;}
 #header2 {
   background: url(../images/header2.png) no-repeat top right;
   width:635px;
