@@ -24,9 +24,9 @@
     <div id="secondary">
       <div id="basic-box-wrapper" class="medium">
         <div id="basic-box" class="medium"><div id="error" class="404">
-          <h1>Oh No!</h1>
+          <h1>Argh!</h1>
         
-          <p><span>404 Error</span>: We couldn't find what you were looking for. Try a search?.</p>
+          <p><span>404 Arrows</span>: We couldn't find what you were looking for. Try a search?.</p>
         </div></div>
       </div>
     </div>
@@ -55,15 +55,13 @@ function createMarker(map, point, brigade) {
   return marker;
 }
 
-function initialize() {
+function loadMap() {
   if (GBrowserIsCompatible()) {
     map = new GMap2(document.getElementById("map_canvas"));
-    map.setCenter(new GLatLng(38.25, -99.53), 3);
+    map.setCenter(new GLatLng(0,0), 1);
     
     map.addControl(new GMapTypeControl());
     map.addControl(new GLargeMapControl());
-    
-    var brigades = []
     
     for(var i = 0; i < brigades.length; i++) {
       var brigade = brigades[i];
@@ -72,6 +70,18 @@ function initialize() {
     }
     
   }
+}
+
+var brigades = [];
+
+function initialize() {
+  new Ajax.Request('/brigades.json', {
+    method: 'get',
+    onSuccess: function(res) {
+      window.brigades = res.responseText.evalJSON();
+      loadMap();
+    }
+  });
 }
 
 Event.observe(window, 'load', initialize);

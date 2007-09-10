@@ -3,13 +3,12 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link href="/stylesheets/screen.css?1189364833" media="screen" rel="Stylesheet" type="text/css" />
+  <link href="/stylesheets/screen.css" media="screen" rel="Stylesheet" type="text/css" />
   <title>Ruby Brigade</title>
 </head>
 <body>
-  <p style="color: green"></p>
   <div id="content">
-
+    <div id="header"><h1><a href="http://rubybrigade.org"></h1></div>
     <div id="primary">
     <div id="header2">
       <form action="/brigades/search" method="get">
@@ -24,13 +23,12 @@
     </div>
     <div id="secondary">
       <div id="basic-box-wrapper" class="medium">
-        <div id="basic-box" class="medium">
-        <div id="error" class="404">
-          <h1>Oh No!</h1>
+        <div id="basic-box" class="medium"><div id="error" class="404">
+          <h1>Ack!</h1>
         
-          <p><span>500 Error</span>: Something went wrong.</p>
-        </div>
-      </div></div>
+          <p><span>500 Arrows</span>: Something went wrong. Try a search?.</p>
+        </div></div>
+      </div>
     </div>
     <div id="footer">
       <p>A reasonable number of rights reserved</p>
@@ -57,15 +55,13 @@ function createMarker(map, point, brigade) {
   return marker;
 }
 
-function initialize() {
+function loadMap() {
   if (GBrowserIsCompatible()) {
     map = new GMap2(document.getElementById("map_canvas"));
-    map.setCenter(new GLatLng(38.25, -99.53), 3);
+    map.setCenter(new GLatLng(0,0), 1);
     
     map.addControl(new GMapTypeControl());
     map.addControl(new GLargeMapControl());
-    
-    var brigades = []
     
     for(var i = 0; i < brigades.length; i++) {
       var brigade = brigades[i];
@@ -74,6 +70,18 @@ function initialize() {
     }
     
   }
+}
+
+var brigades = [];
+
+function initialize() {
+  new Ajax.Request('/brigades.json', {
+    method: 'get',
+    onSuccess: function(res) {
+      window.brigades = res.responseText.evalJSON();
+      loadMap();
+    }
+  });
 }
 
 Event.observe(window, 'load', initialize);
