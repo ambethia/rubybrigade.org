@@ -2,6 +2,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class FeedTest < Test::Unit::TestCase
   
+  def setup
+    # Because we're loading files in the test, not a real HTTP response
+    File.any_instance.stubs(:code).returns("200")
+  end
+  
   def test_should_initialize_with_new_brigade
     brigade = Brigade.new
     assert brigade.rss_feed.is_a?(RSS)
