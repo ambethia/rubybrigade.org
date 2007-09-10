@@ -1,6 +1,11 @@
 <div id="forms">
   <%= error_messages_for :brigade %>
 <% form_for(@brigade) do |f| %>
+  <% content_for :show_and_delete do %>
+    <%= link_to 'Show', @brigade %> |
+    <%= link_to 'Delete', brigade_destroy_path(@brigade) %>
+  <% end %>
+
   <%= render :partial => 'form', :locals => {:f => f} %>
 <% end %>
 </div>

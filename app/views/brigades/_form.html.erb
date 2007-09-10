@@ -27,8 +27,8 @@
   </fieldset>
   </div>
   <div id="recaptcha"><%= recaptcha_tags %></div>
-  <%= link_to 'Show', @brigade %> |
-  <%= link_to 'Delete', brigade_destroy_path(@brigade) %> |
+  
+  <%= yield :show_and_delete %>
   <p>
     <%= f.submit "Save" %>
   </p>
