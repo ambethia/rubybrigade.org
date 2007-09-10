@@ -80,7 +80,7 @@ body {
 #header2 p {
   text-align:right;
 }
-#header2 input  {
+#header2 input {
   position:relative;
   bottom:24px;
   color:#4D4D4D;
@@ -189,6 +189,18 @@ h2.headlines {
   height:33px;
   text-indent:-5000px;
 }
+#basic-box-wrapper.full {
+  width: 950px;
+  padding: 15px 15px;
+  margin-top:2px;
+  background: url(../images/basic-box-top.png) no-repeat top right
+}
+#basic-box.full {
+  margin: 0 10px;
+  padding: 20px 20px;
+  background: #F2F2F2;
+}
+#basic-box-wrapper h2.full {color:#F2F2F2;font: bold 1.5em "Lucida Grande", sans-serif;padding-bottom:5px;}
 #basic-box-wrapper.large {
   width: 610px;
   padding: 15px 15px;
@@ -197,20 +209,21 @@ h2.headlines {
 }
 #basic-box.large {
   margin: 0 10px;
-  padding: 8px 20px;
+  padding: 20px 20px;
   background: #F2F2F2;
 }
 #basic-box-wrapper h2.large {color:#F2F2F2;font: bold 1.5em "Lucida Grande", sans-serif;padding-bottom:5px;}
 
 #basic-box-wrapper.medium {
-  width: 320px;
+  width: 315px;
   padding: 15px 10px;
   margin-top:2px;
+  margin-left:5px;
   background: url(../images/basic-box-top.png) no-repeat top right
 }
 #basic-box.medium {
   margin: 0 10px;
-  padding: 8px 20px;
+  padding: 30px 20px;
   background: #F2F2F2;
 }
 #description {
@@ -263,6 +276,39 @@ h2.headlines {
   padding: 8px 0;
   background: url(../images/list-underline.png) no-repeat bottom center
 }
+
+#forms dt {
+  font: bold 1.5em "Lucida Grande", sans-serif;
+  padding-top: 25px;
+}
+#forms input {
+  font: bold 1em "Lucida Grande", sans-serif;
+  border: 1px solid #999;
+  padding: 2px;
+  width: 100%;
+}
+#forms textarea {
+  font: bold 1em "Lucida Grande", sans-serif;
+  border: 1px solid #999;
+  padding: 2px;
+  width: 100%;
+}
+#forms select {
+  background: #fff;
+  font: bold 1em "Lucida Grande", sans-serif;
+  border: 1px solid #999;
+  padding: 2px;
+  width: 100%;
+}
+#forms h3 {
+  font: bold 2em "Lucida Grande", sans-serif;
+  border-bottom: 4px solid #999;
+}
+#recaptcha {border: 10px solid #fff;width:320px;margin:20px 0;}
+#delete h1 {color:#990000; font: bold 3em "Lucida Grande", sans-serif;text-transform:uppercase;}
+#delete p {font: normal .9em "Lucida Grande", sans-serif;padding-top:10px;}
+#error h1 {font: bold 3em "Lucida Grande", sans-serif;text-transform:uppercase;}
+#error p {font: bold 1.25em "Lucida Grande", sans-serif;}
 #footer {
   padding: 15px 0;
   width: 980px;
@@ -270,7 +316,7 @@ h2.headlines {
 }
 
 #footer p {
-  color: #F2F2F2;
+  color: #fff;
   text-align: right;
   position:relative;
   right: 345px;
