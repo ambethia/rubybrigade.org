@@ -215,6 +215,7 @@ h2.headlines {
   margin: 0 10px;
   padding: 20px 20px;
   background: #F2F2F2;
+  min-height: 100%;
 }
 #basic-box-wrapper h2.large {color:#F2F2F2;font: bold 1.5em "Lucida Grande", sans-serif;padding-bottom:5px;}
 
