@@ -110,10 +110,10 @@ class BrigadesController < ApplicationController
   
   # yep, this method is hairy, but it works. could use some love though.
   def search
-    @title = "Search Brigades"
     # first search by subdomain slug field
     @brigade = Brigade.find_by_subdomain(params[:search])
     if @brigade
+      @title = @brigade.name
       respond_to do |format|
         format.html do
           if subdomain_present?
@@ -128,6 +128,7 @@ class BrigadesController < ApplicationController
     
     # if still unknown, geocode search string and search
     else
+      @title = "Search Brigades"
       # remove all non word characters or underscores
       search_to_geocode = params[:search].gsub(/\W/, ' ').gsub(/_/, ' ')
 
