@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <%= stylesheet_link_tag 'screen' %>
+  <title><%= "#{@title} - " unless @title.nil?  %> RubyBrigade.org</title>
+</head>
+<body>
+  <div id="content">
+    <div id="header"><h1><%= link_to "Ruby Brigade!", ROOT_URL %></h1></div>
+    <%= render_flash %>
+    <%= yield %>
+    <div id="footer">
+      <p>A reasonable number of rights reserved</p>
+      <p>&copy; Copyright 2007</p>
+      <div id="paint-itred">
+        <a href="http://paint.itred.org/">Paint.itRed</a>
+      </div>
+    </div>
+  </div>
+</body>
+<%= javascript_include_tag "prototype", "application" %>
+<%= yield :google_maps -%>
+<%= analytics %>
+</html>

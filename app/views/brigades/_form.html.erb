@@ -20,7 +20,7 @@
       <dt>RSS URL</dt>
       <dd><%= text_field_tag "brigade[feeds][rss][uri]", @brigade.rss_feed.uri %></dd>
       <dt>iCal URL</dt>
-      <dt><%= text_field_tag "brigade[feeds][ics][uri]", @brigade.calendar.uri %></p></dt>
+      <dd><%= text_field_tag "brigade[feeds][ics][uri]", @brigade.calendar.uri %></dd>
       <dt>Established</dt>
       <dd><%= f.date_select 'established_on' %></dd>
     </dl>
@@ -30,17 +30,10 @@
   <p>
     <%= f.submit "Save" %>
   </p>
-
+  <%= yield :show_and_delete %>
 </div></div>
 <% end %>
 <% content_for :secondary do %>
-<div id="search-box">
-<% form_tag({:action => 'search'}, :method => 'get') do %>
-    <label for="search" id="search-label">Location</label>
-    <%= text_field_tag 'search', params[:search] %>
-    <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
-<% end %>
-</div>
 <div id="basic-box-wrapper" class="medium"><div id="basic-box" class="medium">
   <div id="forms">
     <fieldset>

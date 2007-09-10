@@ -42,7 +42,7 @@ class BrigadesController < ApplicationController
     @brigade = Brigade.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => "alternative" }
       format.xml  { render :xml => @brigade }
     end
   end
@@ -51,6 +51,7 @@ class BrigadesController < ApplicationController
   def edit
     @title = "Edit Brigade"
     @brigade = Brigade.find(params[:id])
+    render :layout => "alternative"
   end
 
   # POST /brigades
