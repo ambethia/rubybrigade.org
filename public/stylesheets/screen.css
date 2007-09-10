@@ -402,6 +402,31 @@ table td {
   list-style: square;
   margin-left: 2em;
 }
+.cancel-button {
+  background: url(../images/button-cancel.png) no-repeat top left; 
+  width:90px; 
+  height:22px;
+  text-indent:-5000px;
+  display:block;
+  float:right;
+  padding-right:10px;}
+.show-button {
+  background: url(../images/button-show.png) no-repeat top left; 
+  width:68px; 
+  height:24px;
+  text-indent:-5000px;
+  display:block;
+  float:right;
+  padding-right:10px;}
+.delete-button {
+  background: url(../images/button-delete.png) no-repeat top left; 
+  width:70px; 
+  height:24px;
+  text-indent:-5000px;
+  display:block;
+  float:right;
+  padding-right:10px;}
+button {background:transparent;border:0;}
 
 .forms dt span {
   font-weight: normal;

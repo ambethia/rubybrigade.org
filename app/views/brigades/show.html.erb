@@ -32,7 +32,7 @@
       <ul>
          <li>
             <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>"><%= image_tag "button-website.png", :size => "83x24" %></a></li><%- end -%>
-            <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>"><%= image_tag "button-feed.png", :size => "37x37" %></a><%- end -%>
+            <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>"><%= image_tag "button-feed.png", :size => "23x24" %></a><%- end -%>
             <%- unless @brigade.calendar.uri.blank? -%><a href="<%= @brigade.calendar.uri %>"><%= image_tag "button-ical.png", :size => "19x24" %></a><%- end -%>
           </li>
       </ul>

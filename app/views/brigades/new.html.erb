@@ -2,7 +2,7 @@
 <div id="forms">
 <% form_for(@brigade) do |f| %>
   <% content_for :show_and_delete do %>
-    <%= link_to 'Cancel', ROOT_URL %>
+    <%= link_to 'Cancel', ROOT_URL, {:class => "cancel-button"}  %>
   <% end %>
   <%= render :partial => 'form', :locals => {:f => f} %>
   <div id="primary"><%= yield :primary  %></div>

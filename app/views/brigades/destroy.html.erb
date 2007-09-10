@@ -8,7 +8,7 @@
   
       <p><%= recaptcha_tags %></p>
   
-      <p><%= submit_tag 'Delete' %> or <%= link_to 'Cancel', @brigade %></p>
+      <p><button style="float:right"><%= image_tag 'button-delete.png', :size => "70x24" %></button> <%= link_to 'Cancel', @brigade, {:class => "cancel-button"} %></p><br/>
     <% end %>
     </div>
   </div>
