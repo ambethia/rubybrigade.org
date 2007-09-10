@@ -1,42 +1,44 @@
-  <% content_for :primary do %>
-    <div id="header2">
-      <% form_tag({:action => 'search'}, :method => 'get') do %>
-        <p>
-          <label for="search" id="search-label">Location</label>
-          <%= text_field_tag 'search', params[:search] %>
-          <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
-        </p>
-      <% end %>
+<%- content_for :primary do -%>
+  <div id="header2">
+    <% form_tag({:action => 'search'}, :method => 'get') do %>
+      <p>
+        <label for="search" id="search-label">Location</label>
+        <%= text_field_tag 'search', params[:search] %>
+        <button type="submit"><%= image_tag "search-icon.png", :size => "82x70" %></button>
+      </p>
+    <% end %>
+  </div>
+  <div id="map" class="large"><div id="map-inner" class="large"><div id="map_canvas" class="large"></div></div></div>
+<%- end -%>
+<%- content_for :secondary do -%>
+  <div id="quote-wrapper">
+    <div id="quote">
+      <blockquote>
+        <p>Looking to find a ruby user group near you? Just want explore the international ruby community? Browse the map,
+          or just try guessing a url, like <a href="http://tampa.rubybrigade.org/">tampa.rubybrigade.org</a> or
+          <a href="http://japan.rubybrigade.org/">japan.rubybrigade.org</a>.</p>
+      </blockquote>
     </div>
-    <div id="map" class="large"><div id="map-inner" class="large"><div id="map_canvas" class="large"></div></div></div>
-  <% end %>
-  <% content_for :secondary do %>
-    <div id="quote-wrapper">
-      <div id="quote">
-        <blockquote>
-          <p>Looking to find a ruby user group near you? Just want explore the international ruby community? Browse the map,
-            or just try guessing a url, like <a href="http://tampa.rubybrigade.org/">tampa.rubybrigade.org</a> or
-            <a href="http://japan.rubybrigade.org/">japan.rubybrigade.org</a>.</p>
-        </blockquote>
-      </div>
+  </div>
+  <div id="new-brigades">
+    <ul>
+      <%- for brigade in @newest_brigades -%>
+      <li><%= link_to brigade.name, brigade_url(brigade) %></li>
+      <%- end -%>
+    </ul>
+    <div id="add-brigade">
+      <%= link_to 'New brigade', new_brigade_path %>
     </div>
-    <div id="new-brigades">
-      <ul><% for brigade in @newest_brigades %>
-        <li><%= link_to brigade.name, brigade_url(brigade) %>
-        </li>
-      <% end %></ul>
-      <div id="add-brigade">
-        <%= link_to 'New brigade', new_brigade_path %>
-      </div>
-    </div>
-    <div id="upcoming-events">
-      <ul><% for event in @upcoming_events -%>
-        <li><%= event.uri.blank?? event.summary : link_to(event.summary, event.uri, {:target => "_blank"}) %></li>
-      <% end %></ul>
-    </div>
-  <% end %>
-
-<% content_for :google_maps do %>
+  </div>
+  <div id="upcoming-events">
+    <ul>
+      <%- for event in @upcoming_events -%>
+      <li><%= event.uri.blank?? event.summary : link_to(event.summary, event.uri, {:target => "_blank"}) %></li>
+      <%- end -%>
+    </ul>
+  </div>
+<%- end -%>
+<%- content_for :google_maps do -%>
 <script type="text/javascript" src="http://www.google.com/jsapi?key=<%= GeoKit::Geocoders::google %>"></script>
 <script type="text/javascript">
 google.load("maps", "2");
@@ -76,4 +78,4 @@ function initialize() {
 Event.observe(window, 'load', initialize);
 Event.observe(window, 'unload', function() { GUnload(); });
 </script>
-<% end %>
+<%- end -%>

@@ -4,12 +4,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%= stylesheet_link_tag 'screen' %>
-  <title>Ruby Brigade</title>
+  <title><%= "#{@title} - " unless @title.nil?  %> RubyBrigade.org</title>
 </head>
 <body>
-  <p style="color: green"><%= flash[:notice] %></p>
   <div id="content">
-    <div id="header"><h1><%= link_to "Ruby Brigade!", root_url %></h1></div>
+    <div id="header"><h1><%= link_to "Ruby Brigade!", home_url %></h1></div>
+    <%= render_flash %>
     <%= yield %>
     <div id="primary"><%= yield :primary  %></div>
     <div id="secondary"><%= yield :secondary  %></div>

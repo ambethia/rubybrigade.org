@@ -288,3 +288,8 @@ h2.headlines {
     height: 48px;
     display:block;
 }
+
+div.error p {
+  text-align: right;
+  margin: 10px 10px 0 0;
+}

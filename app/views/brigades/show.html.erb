@@ -1,34 +1,40 @@
 <%- content_for :primary do -%>
-  <div id="header2"><h1><%= @brigade.name %></h1></div>
+  <div id="header2"><h1><%=h @brigade.name %></h1></div>
 
-  <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
-    <div id="description">
-     <p><%= @brigade.description %></p>
+  <div id="basic-box-wrapper" class="large">
+    <div id="basic-box" class="large">
+      <div id="description">
+        <%= textilize h(@brigade.description) %>
+      </div>
+      <div id="details">
+        <h3><%= @brigade.location %></h3>
+        <ul>
+          <%- unless @brigade.membership_size.blank? -%><li><%= @brigade.membership_size %> Members Strong</li><%- end -%>
+          <%- unless @brigade.established_on.nil? -%><li>Est. <%= @brigade.established_on.strftime("%B %Y") %></li><%- end -%>
+          <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>">Website</a></li><%- end -%>
+          <%- unless @brigade.rss_feed.uri.blank? && @brigade.calendar.uri.blank? -%>
+          <li>
+            <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>">RSS</a><%- end -%>
+            <%- unless @brigade.calendar.uri.blank? -%><a href="<%= @brigade.calendar.uri %>">iCal</a><%- end -%>
+          </li>
+          <%- end -%>
+        </ul>
+      </div>
+      <br class="large" />
     </div>
-    <div id="details">
-      <h3><%= @brigade.location %></h3>
-      <ul>
-        <li>Estimated Size: <%= @brigade.membership_size %></li>
-        <li>Established: <%= @brigade.established_on %></li>
-        <li><a href="<%= @brigade.website_url %>">Website</a></li>
-        <li><a href="<%= @brigade.rss_feed.uri %>">RSS</a></li>
-        <li><a href="<%= @brigade.calendar.uri %>">iCal</a></li>
-      </ul>
-    </div>
-    <br class="large" />
-  </div>
-    <%= link_to 'Edit', edit_brigade_path(@brigade) %> |<%= link_to 'Back', root_path %>
+    <div class="error"><p><%= link_to 'Edit this groups information', edit_brigade_path(@brigade) %></p></div>
   </div>
   <%- unless @brigade.events.empty? -%>
   <div id="basic-box-wrapper" class="large">
     <h2 class="upcoming-events">Upcoming Events</h2>
     <div id="basic-box" class="large">
-    <table width="100%">
-      <%- for event in @brigade.events -%>
-      <tr><td><%= link_to event.summary, event.uri %></td><td><%= event.starts_at %></td></tr>
-      <%- end -%>
-    </table>
-  </div></div>
+      <table width="100%">
+        <%- for event in @brigade.events -%>
+        <tr><td><%= link_to event.summary, event.uri %></td><td><%= event.starts_at %></td></tr>
+        <%- end -%>
+      </table>
+    </div>
+  </div>
   <%- end -%>
 <%- end -%>
 <%- content_for :secondary do -%>
@@ -44,12 +50,13 @@
   <div id="basic-box-wrapper" class="medium">
     <h2 class="headlines">Headlines</h2>
     <div id="basic-box" class="medium">
-    <ul>
-    <%- for headline in @brigade.headlines -%>
-      <li><%= link_to headline.summary, headline.uri %></li>
-    <%- end -%>
-    </ul>
-  </div></div>
+      <ul>
+        <%- for headline in @brigade.headlines -%>
+        <li><%= link_to headline.summary, headline.uri %></li>
+        <%- end -%>
+      </ul>
+    </div>
+  </div>
   <%- end -%>
 <%- end -%>
 
