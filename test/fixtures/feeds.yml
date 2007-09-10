@@ -24,7 +24,7 @@ feed_00001:
   last_checked_at: 
   created_at: 2007-09-08 11:19:54 -04:00
 feed_00002: 
-  uri: webcal://ruby.meetup.com/73/calendar/ical/The+Tampa+Ruby+Brigade/
+  uri: webcal://ruby.meetup.com/73/calendar/ical/cal.ics
   updated_at: 2007-09-08 11:43:58 -04:00
   type: ICS
   id: 2

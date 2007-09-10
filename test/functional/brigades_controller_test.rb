@@ -12,6 +12,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
     @controller = BrigadesController.new
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
+    File.any_instance.stubs(:code).returns("200")
   end
 
   def test_should_get_index
