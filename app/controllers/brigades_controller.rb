@@ -27,6 +27,7 @@ class BrigadesController < ApplicationController
   # GET /brigades/1.xml
   def show
     @brigade = Brigade.find(params[:id])
+    @title   = @brigade.name
 
     respond_to do |format|
       format.html # show.html.erb
@@ -37,6 +38,7 @@ class BrigadesController < ApplicationController
   # GET /brigades/new
   # GET /brigades/new.xml
   def new
+    @title = "New Brigade"
     @brigade = Brigade.new
 
     respond_to do |format|
@@ -47,6 +49,7 @@ class BrigadesController < ApplicationController
 
   # GET /brigades/1;edit
   def edit
+    @title = "Edit Brigade"
     @brigade = Brigade.find(params[:id])
   end
 
@@ -87,6 +90,7 @@ class BrigadesController < ApplicationController
   # DELETE /brigades/1
   # DELETE /brigades/1.xml
   def destroy
+    @title   = "Delete Brigade"
     @brigade = Brigade.find(params[:id])
     if request.delete?
       if verify_recaptcha
@@ -105,6 +109,7 @@ class BrigadesController < ApplicationController
   
   # yep, this method is hairy, but it works. could use some love though.
   def search
+    @title = "Search Brigades"
     # first search by subdomain slug field
     @brigade = Brigade.find_by_subdomain(params[:search])
     if @brigade

@@ -1,6 +1,6 @@
 <% content_for :primary do %>
 <div id="header2">
-  <h1>Brigade</h1>
+  <h1><%=h @title %></h1>
 </div>
 <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
   <div id="forms">
@@ -27,11 +27,10 @@
   </fieldset>
   </div>
   <div id="recaptcha"><%= recaptcha_tags %></div>
-  
-  <%= yield :show_and_delete %>
   <p>
     <%= f.submit "Save" %>
   </p>
+  <%= yield :show_and_delete %>
 </div></div>
 <% end %>
 <% content_for :secondary do %>

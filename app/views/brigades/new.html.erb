@@ -1,12 +1,10 @@
-<h1>New brigade</h1>
-
-<%= error_messages_for :brigade %>
-
+<div id="forms">
+  <%= error_messages_for :brigade %>
 <% form_for(@brigade) do |f| %>
-  <%= render :partial => 'form', :locals => {:f => f} %>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
+  <% content_for :show_and_delete do %>
+    <%= link_to 'Cancel', ROOT_URL %>
+  <% end %>
 
-<div class="edit"><p><%= link_to "Cancel", ROOT_URL %></p></div>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+</div>
