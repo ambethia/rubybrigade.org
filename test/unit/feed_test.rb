@@ -23,16 +23,16 @@ class FeedTest < Test::Unit::TestCase
                              :name => "Tampa.rb",
                              :feeds => {
                                :rss => { :uri => ""  },
-                               :ics => { :uri => "http://ruby.meetup.com/73/calendar/ical/The+Tampa+Ruby+Brigade/"  }
+                               :ics => { :uri => "http://ruby.meetup.com/73/calendar/ical/cal.ics"  }
                              }
     assert_equal "", brigade.rss_feed.uri
-    assert_equal "http://ruby.meetup.com/73/calendar/ical/The+Tampa+Ruby+Brigade/", brigade.calendar.uri
+    assert_equal "http://ruby.meetup.com/73/calendar/ical/cal.ics", brigade.calendar.uri
     brigade.update_attributes :feeds => {
-                                :rss => { :uri => "http://tamparuby.com/blog.xml"  },
-                                :ics => { :uri => "http://tamparuby.com/events.ics"  }
+                                :rss => { :uri => "http://tamparuby.com/rss.xml"  },
+                                :ics => { :uri => "http://tamparuby.com/cal.ics"  }
                               }
-    assert_equal "http://tamparuby.com/blog.xml", brigade.rss_feed.uri
-    assert_equal "http://tamparuby.com/events.ics", brigade.calendar.uri
+    assert_equal "http://tamparuby.com/rss.xml", brigade.rss_feed.uri
+    assert_equal "http://tamparuby.com/cal.ics", brigade.calendar.uri
   end
   
   def test_should_raise_an_error_when_calling_parse_on_feed_parent_class
