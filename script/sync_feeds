@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + '/../config/environment'
+
+Feed.find(:first, :order => "last_checked_at ASC").sync

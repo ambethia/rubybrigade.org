@@ -10,7 +10,7 @@ class Feed < ActiveRecord::Base
   
   def sync
     self.feed_items = transmogrify
-    last_checked_at = Time.now
+    self.last_checked_at = Time.now
     update_without_callbacks
   end
   

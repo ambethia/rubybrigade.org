@@ -340,3 +340,7 @@ div.error p {
   text-align: right;
   margin: 10px 10px 0 0;
 }
+
+table td {
+  padding: 10px;
+}

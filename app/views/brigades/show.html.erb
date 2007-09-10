@@ -7,13 +7,13 @@
         <%= textilize h(@brigade.description) %>
       </div>
       <div id="details">
-        <h3><%= @brigade.location %></h3>
+        <h3><%=h @brigade.location %></h3>
         <ul>
           <%- unless @brigade.membership_size.blank? -%><li><%= @brigade.membership_size %> Members Strong</li><%- end -%>
           <%- unless @brigade.established_on.nil? -%><li>Est. <%= @brigade.established_on.strftime("%B %Y") %></li><%- end -%>
-          <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>">Website</a></li><%- end -%>
-          <%- unless @brigade.rss_feed.uri.blank? && @brigade.calendar.uri.blank? -%>
+          <%- unless @brigade.rss_feed.uri.blank? && @brigade.calendar.uri.blank? && @brigade.website_url.blank? -%>
           <li>
+            <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>">Website</a></li><%- end -%>
             <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>">RSS</a><%- end -%>
             <%- unless @brigade.calendar.uri.blank? -%><a href="<%= @brigade.calendar.uri %>">iCal</a><%- end -%>
           </li>
@@ -28,9 +28,12 @@
   <div id="basic-box-wrapper" class="large">
     <h2 class="upcoming-events">Upcoming Events</h2>
     <div id="basic-box" class="large">
-      <table width="100%">
+      <table>
         <%- for event in @brigade.events -%>
-        <tr><td><%= link_to event.summary, event.uri %></td><td><%= event.starts_at %></td></tr>
+        <tr>
+          <td><%= event.starts_at.strftime("%A, %B %d, %Y, %I:%M %p") %></td>
+          <td><%= link_to h(event.summary), h(event.uri) %></td>
+        </tr>
         <%- end -%>
       </table>
     </div>
