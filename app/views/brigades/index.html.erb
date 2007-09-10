@@ -50,7 +50,14 @@
 google.load("maps", "2");
 
 function createMarker(map, point, brigade) {
-  var marker = new GMarker(point);
+  
+  var letteredIcon = new GIcon(baseIcon);
+  letteredIcon.image = "/images/marker.png";
+
+  // Set up our GMarkerOptions object
+  markerOptions = { icon:letteredIcon };
+  var marker = new GMarker(point, markerOptions);
+
   GEvent.addListener(marker, "click", function() {
     marker.openInfoWindowHtml("<a href=\"" + brigade.url + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
       {maxWidth: 230});
@@ -60,7 +67,18 @@ function createMarker(map, point, brigade) {
 
 function initialize() {
   if (GBrowserIsCompatible()) {
-    map = new GMap2(document.getElementById("map_canvas"));
+    // Create a base icon for all of our markers that specifies the
+    // shadow, icon dimensions, etc.
+    window.baseIcon = new GIcon();
+    baseIcon.shadow = "http://www.google.com/mapfiles/shadow50.png";
+    baseIcon.iconSize = new GSize(20, 34);
+    baseIcon.shadowSize = new GSize(37, 34);
+    baseIcon.iconAnchor = new GPoint(9, 34);
+    baseIcon.infoWindowAnchor = new GPoint(9, 2);
+    baseIcon.infoShadowAnchor = new GPoint(18, 25);
+    
+    
+    var map = new GMap2(document.getElementById("map_canvas"));
     <%- if @location -%>
     map.setCenter(new GLatLng(<%= "#{@location.lat},#{@location.lng}" %>), 6);
     <%- else -%>
