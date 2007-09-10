@@ -1,4 +1,13 @@
 <%- content_for :primary do -%>
+
+  <!--[if IE]>
+  <style>
+  #search-box input {
+    width: 182px;
+  }
+  </style>
+  <![endif]-->
+
   <div id="header2"><h1><%=h @brigade.name %></h1></div>
 
   <div id="basic-box-wrapper" class="large">
@@ -83,7 +92,7 @@ function createMarker(map, point, brigade) {
   var marker = new GMarker(point, markerOptions);
   GEvent.addListener(marker, "click", function() {
     marker.openInfoWindowHtml("<a href=\"/brigades/" + brigade.id + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
-      {maxWidth: 230});
+      {maxWidth: 250});
   });
   return marker;
 }

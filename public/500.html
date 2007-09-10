@@ -56,7 +56,7 @@ function createMarker(map, point, brigade) {
 
   GEvent.addListener(marker, "click", function() {
     marker.openInfoWindowHtml("<a href=\"/brigades/" + brigade.id + "\"><strong>" + brigade.name + "</strong></a><br />" + brigade.description,
-      {maxWidth: 230});
+      {maxWidth: 250});
   });
   return marker;
 }
