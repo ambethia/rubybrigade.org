@@ -162,8 +162,8 @@ class BrigadesController < ApplicationController
   
   private
     def load_new_brigades_and_events
-      @upcoming_events = Event.upcoming
-      @newest_brigades = Brigade.newest
+      @upcoming_events = Event.upcoming(2)
+      @newest_brigades = Brigade.newest(3)
     end
     
     def load_countries

@@ -23,7 +23,10 @@
   <div id="new-brigades">
     <ul>
       <%- for brigade in @newest_brigades -%>
-      <li><%= link_to brigade.name, brigade_url(brigade) %></li>
+      <li>
+        <%= link_to h(brigade.name), brigade_url(brigade) %><br />
+        <span><%= h(brigade.location) %></span>
+      </li>
       <%- end -%>
     </ul>
     <div id="add-brigade">
@@ -33,7 +36,10 @@
   <div id="upcoming-events">
     <ul>
       <%- for event in @upcoming_events -%>
-      <li><%= event.uri.blank?? event.summary : link_to(event.summary, event.uri, {:target => "_blank"}) %></li>
+      <li>
+        <%= event.uri.blank? ? h(event.summary) : link_to(h(event.summary), h(event.uri)) %><br />
+        <span><%= h(event.feed.brigade.name) %></span>
+      </li>
       <%- end -%>
     </ul>
   </div>

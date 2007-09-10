@@ -14,7 +14,9 @@
           <%- unless @brigade.rss_feed.uri.blank? && @brigade.calendar.uri.blank? && @brigade.website_url.blank? -%>
           <li>
             <%- unless @brigade.website_url.blank? -%><li><a href="<%= @brigade.website_url %>">Website</a></li><%- end -%>
+            
             <%- unless @brigade.rss_feed.uri.blank? -%><a href="<%= @brigade.rss_feed.uri %>">RSS</a><%- end -%>
+            
             <%- unless @brigade.calendar.uri.blank? -%><a href="<%= @brigade.calendar.uri %>">iCal</a><%- end -%>
           </li>
           <%- end -%>

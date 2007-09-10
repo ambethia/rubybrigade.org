@@ -173,7 +173,8 @@ body {
   background: url(../images/quote-top.png) no-repeat top center
 }
 #quote blockquote {
-  font: bold .95em "Lucida Grande", sans-serif;
+  text-align: justify;
+  font: bold 0.8em "Lucida Grande", sans-serif;
   padding: 20px 30px;
   background: url(../images/quote-bottom.png) no-repeat bottom center;
 }
@@ -317,7 +318,8 @@ h2.headlines {
 }
 
 #footer p {
-  color: #fff;
+  color: #444;
+  font-size: 0.8em;
   text-align: right;
   position:relative;
   right: 345px;
@@ -343,4 +345,13 @@ div.error p {
 
 table td {
   padding: 10px;
+}
+
+#upcoming-events li, #new-brigades li {
+  font-size: 0.9em;
+}
+
+#upcoming-events li span, #new-brigades li span {
+  font-size: 0.9em;
+  font-weight: normal;
 }
