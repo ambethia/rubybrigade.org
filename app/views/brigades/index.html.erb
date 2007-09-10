@@ -79,7 +79,7 @@ function initialize() {
     
     
     var map = new GMap2(document.getElementById("map_canvas"));
-    <%- if @location -%>
+    <%- if @location && @location.lat -%>
     map.setCenter(new GLatLng(<%= "#{@location.lat},#{@location.lng}" %>), 6);
     <%- else -%>
     map.setCenter(new GLatLng(0,0), 1);
