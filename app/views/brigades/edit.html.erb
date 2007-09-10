@@ -1,13 +1,12 @@
+<%- @title = "Editing Brigade" -%>
 <div id="forms">
-  <%= error_messages_for :brigade %>
 <% form_for(@brigade) do |f| %>
   <% content_for :show_and_delete do %>
-    <%= link_to 'Show', @brigade %> |
+    <%= link_to 'Show', @brigade %> or
     <%= link_to 'Delete', brigade_destroy_path(@brigade) %>
   <% end %>
   <%= render :partial => 'form', :locals => {:f => f} %>
   <div id="primary"><%= yield :primary  %></div>
   <div id="secondary"><%= yield :secondary  %></div>
-  
 <% end %>
 </div>

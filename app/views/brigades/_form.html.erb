@@ -3,41 +3,43 @@
   <h1><%=h @title %></h1>
 </div>
 <div id="basic-box-wrapper" class="large"><div id="basic-box" class="large">
-  <div id="forms">
+  <%= error_messages_for :brigade %>
+  <div class="forms">
   <fieldset>
     <h3>Basics</h3>
     <dl>
-      <dt>Name</dt>
+      <dt>Name <span>Required</span></dt>
       <dd><%= f.text_field 'name' %></dd>
-      <dt>Description</dt>
+      <dt>Description <span>Tell us about your group</span></dt>
       <dd><%= f.text_area 'description', :rows => 10 %></dd>
-      <dt>Subdomain</dt>
+      <dt>Subdomain <span>Not required, but must be unique (for groupname.rubybrigade.org)</span></dt>
       <dd><%= f.text_field 'subdomain' %></dd>
-      <dt>Membership Size:</dt>
+      <dt>Membership Size <span>About how many members are in this group?</span></dt>
       <dd><%= f.text_field 'membership_size' %></dd>
-      <dt>Website URL</dt>
+      <dt>Website URL <span>Linky McLinklink!</span></dt>
       <dd><%= f.text_field 'website_url' %></dd>
-      <dt>RSS URL</dt>
+      <dt>RSS Feed <span>If your group has a blog, we'll display the headlines</span></dt>
       <dd><%= text_field_tag "brigade[feeds][rss][uri]", @brigade.rss_feed.uri %></dd>
-      <dt>iCal URL</dt>
+      <dt>iCal Feed <span>We'll show your upcoming meetings</span></dt>
       <dd><%= text_field_tag "brigade[feeds][ics][uri]", @brigade.calendar.uri %></dd>
-      <dt>Established</dt>
-      <dd><%= f.date_select 'established_on' %></dd>
+      <dt>Established <span>How long have you been meeting?</span></dt>
+      <dd class="established"><%= f.date_select 'established_on' %></dd>
     </dl>
   </fieldset>
   </div>
   <div id="recaptcha"><%= recaptcha_tags %></div>
   <p>
-    <%= f.submit "Save" %>
+    <%= f.submit "Save", :class => "submit" %>
+    <%= yield :show_and_delete %>
   </p>
-  <%= yield :show_and_delete %>
 </div></div>
 <% end %>
 <% content_for :secondary do %>
-<div id="basic-box-wrapper" class="medium"><div id="basic-box" class="medium">
-  <div id="forms">
+<div id="basic-box-wrapper" class="medium location"><div id="basic-box" class="medium">
+  <div class="forms">
     <fieldset>
       <h3>Location</h3>
+      <p>At least one of these fields is required.</p>
     <dl>
       <dt>City</dt>
       <dd><%= f.text_field 'city' %></dd>

@@ -65,7 +65,7 @@ class BrigadesController < ApplicationController
         format.html { redirect_to(@brigade) }
         format.xml  { render :xml => @brigade, :status => :created, :location => @brigade }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "alternative" }
         format.xml  { render :xml => @brigade.errors }
       end
     end
@@ -82,7 +82,7 @@ class BrigadesController < ApplicationController
         format.html { redirect_to(@brigade) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "alternative" }
         format.xml  { render :xml => @brigade.errors }
       end
     end

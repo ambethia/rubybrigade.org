@@ -1,5 +1,5 @@
+<%- @title = "New Brigade" -%>
 <div id="forms">
-  <%= error_messages_for :brigade %>
 <% form_for(@brigade) do |f| %>
   <% content_for :show_and_delete do %>
     <%= link_to 'Cancel', ROOT_URL %>

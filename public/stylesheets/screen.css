@@ -302,7 +302,6 @@ br.clear {clear:both;}
   font: bold 1em "Lucida Grande", sans-serif;
   border: 1px solid #999;
   padding: 2px;
-  width: 100%;
 }
 #forms h3 {
   font: bold 2em "Lucida Grande", sans-serif;
@@ -326,6 +325,10 @@ br.clear {clear:both;}
   text-align: right;
   position:relative;
   right: 345px;
+}
+
+input.submit {
+  width: auto !important;
 }
 
 #paint-itred {
@@ -357,4 +360,54 @@ table td {
 #upcoming-events li span, #new-brigades li span {
   font-size: 0.9em;
   font-weight: normal;
+}
+
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 530px;
+  border: 2px solid #900;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #eee;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #900;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+  margin-top: 1em;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin-left: 2em;
+}
+
+.forms dt span {
+  font-weight: normal;
+  font-size: 0.5em;
+}
+
+dd.established
+
+div.location {
+  margin-top: 75px !important;
 }
