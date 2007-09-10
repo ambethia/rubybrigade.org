@@ -309,6 +309,7 @@ br.clear {clear:both;}
   border-bottom: 4px solid #999;
 }
 #recaptcha {border: 10px solid #fff;width:320px;margin:20px 0;}
+#delete {background: url(../images/destroy.png) no-repeat top left;padding-left:190px;}
 #delete h1 {color:#990000; font: bold 3em "Lucida Grande", sans-serif;text-transform:uppercase;}
 #delete p {font: normal .9em "Lucida Grande", sans-serif;padding-top:10px;}
 #error {background: url(../images/error.png) no-repeat bottom center;height: 254px;}
