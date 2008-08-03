@@ -1,0 +1,9 @@
+[submodule "vendor/plugins/geokit"]
+	path = vendor/plugins/geokit
+	url = git://github.com/ptb/geokit.git
+[submodule "vendor/plugins/exception_logger"]
+	path = vendor/plugins/exception_logger
+	url = git://github.com/defunkt/exception_logger.git
+[submodule "vendor/plugins/recaptcha"]
+	path = vendor/plugins/recaptcha
+	url = git://github.com/ambethia/recaptcha.git

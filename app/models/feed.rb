@@ -1,6 +1,6 @@
 class Feed < ActiveRecord::Base
   belongs_to :brigade
-  has_many   :feed_items
+  has_many   :feed_items, :dependent => :destroy
   
   after_save :sync
   

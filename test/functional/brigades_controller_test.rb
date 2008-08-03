@@ -6,13 +6,17 @@ class BrigadesController; def rescue_action(e) raise e end; end
 
 class BrigadesControllerTest < Test::Unit::TestCase
   include BrigadesHelper
-  fixtures :brigades
 
   def setup
     @controller = BrigadesController.new
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
     File.any_instance.stubs(:code).returns("200")
+    
+    ENV["RECAPTCHA_PUBLIC_KEY"]  = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    ENV["RECAPTCHA_PRIVATE_KEY"] = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    
+    @brigade = brigades(:tampa)
   end
 
   def test_should_get_index
@@ -92,29 +96,29 @@ class BrigadesControllerTest < Test::Unit::TestCase
   end
 
   def test_should_show_brigade
-    get :show, :id => 1
+    get :show, :id => @brigade.id
     assert_response :success
   end
   
   def test_should_disallow_subdomain_for_show
     @request.host = "tampa.rubybrigade.org"
-    get :show, :id => 1
+    get :show, :id => @brigade.id
     assert_response :redirect
-    assert_redirected_to "http://rubybrigade.org/brigades/1"
+    assert_redirected_to "http://rubybrigade.org/brigades/#{@brigade.id}"
   end
 
   def test_should_get_edit
-    get :edit, :id => 1
+    get :edit, :id => @brigade.id
     assert_response :success
   end
   
   def test_should_update_brigade
-    put :update, :id => 1, :brigade => { }
+    put :update, :id => @brigade.id, :brigade => { }
     assert_redirected_to brigade_url(assigns(:brigade))
   end
   
   def test_should_not_update_brigade_when_name_is_blank
-    put :update, :id => 1, :brigade => { :name => '' }
+    put :update, :id => @brigade.id, :brigade => { :name => '' }
     
     assert_response :success
     assert_template 'edit'
@@ -125,7 +129,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
   
   def test_should_destroy_brigade
     old_count = Brigade.count
-    delete :destroy, :id => 1
+    delete :destroy, :id => @brigade.id
     assert_equal old_count-1, Brigade.count
     
     assert_redirected_to brigades_path
@@ -133,7 +137,7 @@ class BrigadesControllerTest < Test::Unit::TestCase
   
   def test_should_not_destroy_brigade_when_verify_recaptcha_fails
     @controller.expects(:verify_recaptcha).returns(false)
-    delete :destroy, :id => 1
+    delete :destroy, :id => @brigade.id
     assert_response :success
     assert_equal "Recaptcha was incorrect", flash[:notice]
   end

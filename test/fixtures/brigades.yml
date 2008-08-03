@@ -1,6 +1,5 @@
 --- 
 tampa: 
-  id: 1
   name: Tampa Ruby Brigade
   subdomain: tampa
   description: Curious about Ruby on Rails? Into web development and want to improve your technique, do things faster and cleaner? Want to learn more and meet others thinking along the same lines in the Tampa Bay area? If so, this is the place.
@@ -13,10 +12,7 @@ tampa:
   lat: 27.9465
   state_region: FL
   established_on: 2007-09-08
-  created_at: 2007-09-08 11:19:54 -04:00
-  updated_at: 2007-09-08 11:43:58 -04:00
 portland: 
-  id: 2
   name: PDX Ruby
   subdomain: portland
   description: pdx.rb is a gathering of Ruby programmers in the Portland, Oregon, area.
@@ -29,5 +25,3 @@ portland:
   lng: -122.67568
   lat: 45.51181
   established_on: 2007-09-08
-  created_at: 2007-09-08 11:21:03 -04:00
-  updated_at: 2007-09-08 11:55:59 -04:00

@@ -1,33 +1,24 @@
 --- 
-feed_00003: 
+tampa_rss: 
   uri: ""
-  updated_at: 2007-09-08 11:55:59 -04:00
   type: RSS
-  id: 3
-  brigade_id: 2
-  last_checked_at: 
-  created_at: 2007-09-08 11:21:03 -04:00
-feed_00004: 
+  brigade: portland
+  last_checked_at:
+
+tampa_ical: 
   uri: ""
-  updated_at: 2007-09-08 11:55:59 -04:00
   type: ICS
-  id: 4
-  brigade_id: 2
-  last_checked_at: 
-  created_at: 2007-09-08 11:21:03 -04:00
-feed_00001: 
+  brigade: portland
+  last_checked_at:
+
+tampa_rss: 
   uri: ""
-  updated_at: 2007-09-08 11:43:58 -04:00
   type: RSS
-  id: 1
-  brigade_id: 1
-  last_checked_at: 
-  created_at: 2007-09-08 11:19:54 -04:00
-feed_00002: 
+  brigade: tampa
+  last_checked_at:
+
+tampa_ical: 
   uri: webcal://ruby.meetup.com/73/calendar/ical/cal.ics
-  updated_at: 2007-09-08 11:43:58 -04:00
   type: ICS
-  id: 2
-  brigade_id: 1
-  last_checked_at: 
-  created_at: 2007-09-08 11:19:54 -04:00
+  brigade: tampa
+  last_checked_at:
